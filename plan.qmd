@@ -1,0 +1,435 @@
+---
+title: "Project A Plan"
+author: "Thomas E. Love, Ph.D."
+date-modified: last-modified
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+```
+
+# The Deliverables
+
+You will develop and send to us (through Canvas):
+
+1. the analytic tibble (as an .Rds data file) you developed following the [Data page](data.qmd) instructions,
+2. a Quarto (.qmd) file containing your data management work, and the other elements required in the Project A Plan, and
+3. the HTML result of rendering your Quarto file. The resulting HTML document will have 15 sections, as described below.
+
+The deadline for the Project A Plan is found on the [Course Calendar](https://thomaselove.github.io/431-2025/calendar.html).
+
+::: {.callout-note}
+
+- Use spell check (hit F7) on your Quarto file before rendering it, and review the HTML result carefully to ensure that no residual warnings or error messages remain in the document.
+- When we run the Quarto file, it needs to produce your HTML file without errors. (Note: warnings or messages are OK at this stage, but it has to work.)
+- Do not suppress the R code at any point in the document. All R code should be echoed.
+- If you are working with a **partner**, exactly one of you should submit the materials to Canvas, and the other partner should submit a text document (Word or PDF is fine) to Canvas that reads: "My name is [YOUR NAME]. I am working on Project A with [INSERT FULL NAME OF YOUR PARTNER], and they will submit the materials for the Plan"
+
+:::
+
+To complete the Project A Plan, you will need to have completed all six Data Tasks on our [Data page](data.qmd) but none of the work described on our [Analyses page](analyses.qmd).
+
+# Use the Template and Sample Plan
+
+There is a Project A Plan template, and a sample Project A Plan, available to you on the [Examples page](examples.qmd). Please use these tools to facilitate your progress, *and* help us evaluate your work quickly.
+
+# Project A Plan: Title
+
+You need to come up with a meaningful title (containing at most 80 characters) for your work.
+
+1. Do not use the terms "Project", "Plan" or "Project A" or "431" in your title. 
+2. You can use "CHR 2025" as the abbreviation in your title for "County Health Rankings, 2025." 
+3. Your title should be no longer than 80 characters. You can use a subtitle if you like, but the title must stand on its own.
+4. It's fine if your title focuses on just one of your three analyses, rather than all three.
+
+# Plan Author(s)
+
+Your full name, and if you worked with a partner, both full names, are found in the author section of the Quarto (in the YAML) and appear legibly at the start of the HTML document.
+
+# Sections of the Project A Plan
+
+The Project A Plan includes sections, as described below.
+
+## Section 1. R Packages
+
+All necessary packages (and no unused packages) should be loaded at the start of the work, and all warnings or messages associated with that loading are suppressed in the HTML result.
+
+::: {.callout-note}
+
+It seems impossible to do this work without the `janitor`, `naniar`, `xfun`, `easystats` and `tidyverse` packages. Remember to load `easystats` and the `tidyverse` last. 
+
+The use of other packages is up to you, and you may want to source in the `Love-431.R` script, too.
+
+:::
+
+## Section 2. Data Ingest
+
+This section should display the results of following the instructions in Data Task 1 from the [Data page](data.qmd). In this section, you should ingest the raw data into `chr_2025_raw`, selecting the main variables under consideration and then filter to the ranked counties, producing a tibble with 3088 rows and 90 columns. Do not list the tibble, but use R code to demonstrate that your work meets this requirement.
+
+::: {.callout-note}
+
+We will want to check that the project ingests the data properly. This means that you have eliminated the correct row (in any way that works) as you import the data, and that you have used `read_csv()` to read in the data, thus creating a tibble.
+
+:::
+
+## Section 3. State Selection
+
+This section follows the instructions for [Data Task 2](data.qmd). Here, you will identify your six states by postal abbreviation code and name, and write a sentence or two describing your motivation for these selections. You will also demonstrate that your selection yields a new tibble with 300-800 counties, all of which are ranked, and that you have converted the `state` variable of postal abbreviation codes to a factor.
+
+::: {.callout-note}
+
+- Which states were chosen needs to be clear, and we'll want to read a sentence about why you chose the states you did.
+- This must lead to 300-800 counties, and this number (total number of counties) must be clear from the document (both the number of rows in the final tibble and in writing.)
+- Do not drop any counties from any of the states you selected in the development of your tibble.
+
+:::
+
+## Section 4. Variable Selection 
+
+This section follows the instructions for [Data Task 3](data.qmd). Here, you will provide code to identify and select a total of nine variables, including the four required and your five selected variables. 
+
+## Section 5. Variable Cleaning and Renaming
+
+For each of your selected variables, you will use the instructions in [Data Task 3](data.qmd) to complete appropriate cleaning of the variable, and replace the initial version with your cleaned alternative, renaming each selected variable as you go.
+
+## Section 6. Creating the Analysis 2 Predictor
+
+Use the instructions in [Data Task 4](data.qmd) to develop the binary factor that you will use as your Analysis 2 predictor. Be sure to describe the exact cutpoints used in creating the low and high groups, and demonstrate that the resulting factor has approximately 40% of your original observations in the low group, 40% in the high group, and missing data for the middle 20%.
+
+## Section 7. Adding Data from CHR 2019 for the Analysis 3 Outcome
+
+Use the instructions in [Data Task 5](data.qmd) to include the CHR 2019 version of your Analysis 3 outcome as a variable in your tibble. This should give you a total of 11 variables.
+
+## Section 8. Arranging and Saving The Analytic Tibble
+
+After renaming your variables, arrange the 11 variables in your **chr_2025** tibble into the order specified in [Data Task 6](data.qmd).
+
+Then save the tibble as an R data set. Don't make any changes to the tibble after this point.
+
+## Section 9. Print the Tibble
+
+You will show that your **chr_2025** tibble is in fact a tibble and not just a data frame by listing it, so that we can see that only the first 10 rows are printed, and the columns are appropriately labeled. The command you want is just:
+
+```{r}
+#| eval: false
+
+chr_2025
+```
+
+## Section 10. Numerical Summaries
+
+You will do four things here.
+
+### Section 10.1 Table of States by Binary Factor
+
+First, use the `tabyl()` function from the `janitor` package to produce a two-way table of `state` (in the rows) classified against the factor variable (with levels Low and High, plus some missing values, in the columns) that you created in Data Task 4 from the [Data page](data.qmd).
+
+- Be sure to include both row and column marginal totals in your `tabyl()` result here. 
+- We should see some missing values in the columns.
+
+### Section 10.2 `describe_distribution()` results
+
+Next, display the results of `describe_distribution()` from the `datawizard` package (from the `easystats` meta-package), run on the entire tibble. 
+
+- For all variables except the two factors, this will allow us to see (among other things) that the minimum and maximum values that make sense, and also that each of your variables shows the appropriate number of counties.
+
+### Section 10.3 `data_codebook()` results
+
+Next, run the `data_codebook()` function from the `datawizard` package from `easystats` on your tibble, with two specific settings (max_values = 6 and range_at = 15), as shown below.
+
+```{r}
+#| eval: false
+
+data_codebook(chr_2025, max_values = 6, range_at = 15)
+```
+
+Look over these results to be sure that:
+
+- all of your planned outcome and quantitative predictor variables show a minimum and maximum value, 
+- you have no more than 20% missing values in either of your Analysis 1 variables, your Analysis 2 outcome and also your Analysis 3 outcome (in each year)
+- and that your data are missing only where they are supposed to be missing. 
+    - Specifically, you have no missing data at all in your identifying variables (`fipscode`, `state`, `county`) nor in your `county_clustered` variable.
+    - Your binary factor should definitely have about 20% missing values, of course, since that's how you created it.
+
+Include a sentence verifying that all of these checks are true.
+
+### Section 10.4 Distinct Values
+
+Fourth and finally, provide counts of distinct values for each of your variables. The following code should be helpful:
+
+```{r}
+#| eval: false
+
+chr_2025 |> 
+  summarise(across(everything(), ~ n_distinct(.))) |>
+  knitr::kable()
+```
+
+Be sure to check this output to see that:
+
+- you have a distinct `fipscode` for every row in your tibble, and
+- you have at least 15 unique values for each outcome and for the quantitative predictors in your analyses,
+- we can see all of the results in your HTML output.
+
+Include a sentence verifying that these checks are true.
+
+## Section 11. The Codebook
+
+There are two steps to complete the codebook section.
+
+First, write a sentence stating the number of counties (should be 300-800) and variables (should be eleven) in your tibble. Then use the `dim()` function to show us that your sentence is correct.
+
+Second, create a variable description table which contains, for each of the 11 variables in your data set:
+
+- the variable's name in your tibble,
+- its role in your planned analyses, where:
+    - A1-out = Analysis 1 outcome
+    - A1-pre = Analysis 1 predictor
+    - and so on, leaving the variables not used in Analyses 1-3 with blank roles,
+- the original `vXXX` code (leave off the `_rawvalue`, so it might be `v009`, for example) for this variable in the CHR 2025 data,
+- the definition of the variable (from CHR) including its units,
+    - for your binary variable, a clear indication of the cutpoints you used should be provided (what does Low mean and what does High mean?)
+- the year(s) in which the variable was measured (from CHR)
+
+:::{.callout-tip}
+
+Use the [County Health Rankings website's 2025 Measures list](https://www.countyhealthrankings.org/health-data/county-health-rankings-measures), and in particular the linked information on that page for full descriptions, definitions, years and limitations of the variables you have selected. 
+
+- With regard to the data for Analysis 3 that you obtained from CHR 2019, I provided the relevant information at the end of the instructions for [Data Task 5](data.qmd#sources-and-years-for-2019-chr-variables). 
+
+:::
+
+Here is a sample variable description table with just some of the variables - yours will have to include all 11, of course...
+
+Variable | Role | Old Name | Description | Year(s)
+:--------: | :----: | :--------: | :-----------: | :------:
+**fipscode** | ID | `fipscode` | FIPS code | --
+**state** | ID | `state` | State Abbreviation (list your states here) | --
+**county** | ID | `county` | County Name | --
+**poor_fair_health** | A1-out | `v002` | Percentage of adults reporting fair or poor health (age-adjusted). | 2022
+**adult_obesity** | A1-pre | `v011` | Percentage of the adult population (age 18 and older) that reports a body mass index (BMI) greater than or equal to 30 kg/m2 (age-adjusted). | 2022
+**adult_smoking** | A2-out | `v009` | Percentage of adults who are current smokers (age-adjusted). | 2022
+**income_ineq_cat** | A2-pre | from `v044` | Low: $\leq$ 4.25, High: $\geq$ 4.60. | 2019-23
+**income_inequality** | -- | `v044` | Ratio of household income at the 80th percentile to income at the 20th percentile. | 2019-23
+
+and so on.
+
+
+## Section 12. Your Research Questions
+
+In this section, you will provide three research questions, one each for Analysis 1, Analysis 2, and Analysis 3. It would help to provide one subsections for each Analysis within this section, so that Section 12.1 is Analysis 1, Section 12.2 is Analysis 2, and Section 12.3 is Analysis 3.
+
+For each analysis ...
+
+1. Start by describing what you want to study, and then specify a research question (which should end with a question mark and be something you can resolve with the planned analysis.)
+2. Don’t boil the ocean here. You’re looking for a research question that can be reasonably addressed using your data, so it has to be pretty straightforward.
+3. If you have a pre-existing belief about what will happen, before you look at the data, please feel encouraged to include a statement about that belief before specifying your question.
+
+### Your Research Question for Analysis 1
+
+Here you will propose your Research Question for Analysis 1 and provide some motivation for your variable choices associated with that analysis. A trio of well-developed research questions in this section is the **most important part** of this portfolio.
+
+- A research question will **end with a question mark**, and will be something you will be able to answer (or at least respond to effectively) after your Analysis 1 is complete.
+- Use one research question for Analysis 1, another for Analysis 2, and a third for Analysis 3.
+
+After listing your question, you should **provide some brief speculation** as to the nature of the relationship you anticipate finding based on your hypotheses about the variables you plan to study (following my tips below.)
+
+#### Tips for the research question in Analysis 1
+
+- Examples of dull but moderately effective and minimally appropriate research questions for Analysis 1 would be:
+
+**How well does a linear model using [predictor] predict [outcome], in [number] counties in the states of [list of your states]?**
+
+or
+
+**What is the nature of the association between [predictor] and [outcome], in [number] counties in the states of [list of your states]?**
+
+- You should be able to do better than that, especially if you have a reason to believe something in advance about the direction or strength of the association you are anticipating. 
+- However, if you're struggling, using that format will be OK. 
+- A research question uses formal but clear language. 
+- Given your planned analyses, stay away from statements about cause and effect, and don't use the words correlate or regression (in any form) in your research question.
+
+### Research Question for Analysis 2
+
+Here you will propose your Research Question for Analysis 2 and provide some motivation for your variable choices associated with that analysis. All of the tips for Analysis 1 apply in this case, too. 
+
+- Please remember that a research question for this course should end in a question mark.
+- Again, after listing your question, it is completely appropriate for you to provide some brief speculation as to the nature of the relationship you anticipate finding based on your hypotheses about the variables you plan to study.
+- An example of a dull but moderately effective and minimally appropriate research question for Analysis 2 might be:
+
+**Are there meaningful differences in the mean of [outcome] for counties with high and low levels of [predictor]?**
+
+Again, you should be able to do a bit better than that.
+
+### Research Question for Analysis 3
+
+Here you will propose your Research Question for Analysis 3, and provide some motivation for your variable choices associated with that analysis. All of the tips for Analysis 1 apply in this case, too. 
+
+- Please remember that a research question for this course should end in a question mark.
+- Again, after listing your question, it is completely appropriate for you to provide some brief speculation as to the nature of the relationship you anticipate finding based on your hypotheses about the variables you plan to study.
+- An example of a dull but moderately effective and minimally appropriate research question for Analysis 3 might be:
+
+**Are there meaningful differences in the mean of [outcome] for counties in 2025 as compared to 2019?**
+
+Again, you should be able to do a bit better than that.
+
+## Section 13. Reflection
+
+Here you will provide a paragraph describing the most challenging (or difficult) part of completing the work so far, and how you were able to overcome whatever it was that was most challenging.
+
+Your discussion of the biggest challenge includes a paragraph (or more) written in English, with attention paid to grammar, syntax and spelling.  It needs to be clear to us from reading your reflection what your biggest issue was, and how you tried to address it.
+
+Please be specific - a time management issue, for example, could be attributed to a lot of different things. Take the time to describe what happened and how you got past it in some detail.
+
+## Section 14. AI Usage
+
+All students should have an AI Usage section.
+
+- If you decide to get help from a large language model (like ChatGPT) to help with your phrasing of ideas, or building code, OK, but you need to describe what you did in some detail here. Use multiple clear and complete sentences.
+- If you use nothing outside of the spell-checker and code completion tools within RStudio, please write that here, as follows:
+
+In preparing this response, I made no use of AI outside of spell-check and code completion within RStudio.
+
+## Section 15. Session Information
+
+As we have required in our Labs, there must be a Session Information section at the end of the document. This should indicate that a current version of R and R packages is used.
+
+We'd like you to use the `xfun` package's version of `session_info()`, as we've done in the labs.
+
+# Submission Instructions
+
+- Be sure to use spell check (just hit F7) on your Quarto file before rendering it, and review the HTML result carefully to ensure that no residual warnings or error messages remain in the document.
+- Be sure that your Plan includes your name (names if you are working with a partner) as the author in Quarto, and thus in HTML, as well as a proper title. 
+
+Your Plan (including your R data set, Quarto and HTML files) should then be submitted to Canvas by the deadline listed in the [Course Calendar](https://thomaselove.github.io/431-2025/calendar.html). 
+
+# Grading The Project A Plan
+
+Dr. Love and the TAs will review your Project A Plan and either ACCEPT it or ask for a REDO.
+
+- ACCEPT means you're done, and should move on the rest of Project A, perhaps while making some small changes that we request of you in your submission on Canvas.
+    - To receive an ACCEPT, you must meet the specifications above, and also you must have no more than two spelling, typographical or grammatical errors in the document as a whole that we catch.
+    - See below for a list of things we checked in the 2024 Plans.
+- REDO means you'll need to fix the problems we've identified (plus make sure you've done all of the things in these instructions) and resubmit by the deadline we give you, which will require a rapid turnaround.
+    - If your Plan is accepted on the initial submission and was on time, you'll receive 20 points.
+    - If your Plan is accepted on the first REDO (submission 2), you'll receive 18 points out of a possible 20.
+    - If your Plan is accepted on the second or third REDO (submissions 3 or 4) or later, you'll receive 16 points out of a possible 20.
+    - We hope we won't have to go further than 2 revisions for anyone.
+
+If you don't have some feature that we "prefer" but doesn't alone require a REDO, we may mention this in our ACCEPT feedback and ask you to fix it in your Project A Portfolio.
+
+## Checklist: Review Elements for The Project A Plan
+
+In 2024, what did we look for in order to ACCEPT the Project A Plan, rather than require a REDO? The list of elements follows. We will probably look at most of these things again in 2025.
+
+### Element A. The complete Project A Plan is submitted on time.
+
+1. If it's 1-24 hours late, it will be reviewed later than those received on time, and penalized for lateness.
+2. If you worked with a partner, both names are shown as authors in the HTML. Exactly one of you has submitted the materials to Canvas, while the other partner has submitted a text document (Word or PDF is fine) to Canvas that reads: "My name is [YOUR NAME]. I am working on Project A with [INSERT FULL NAME OF YOUR PARTNER], and they will submit the materials for the Plan."
+3. The R data set (analytic tibble), Quarto (.qmd) file, and HTML result are all present in the submission to Canvas.
+4. The Quarto file produces the HTML file without errors when we run it. (Note: warnings or messages are OK, but it has to work.)
+
+### Element B. Template, Title, Author(s) and Date show we want to see in the HTML.
+
+1. There is a real title that does not include "Project", "Plan", "Project A" or "431" in it, but is correctly spelled, and fits in the available space in the HTML.
+2. The title is no more than 80 characters in length, excluding any subtitles.
+3. The title (without the subtitle) describes the work effectively on its own.
+4. The author(s) name(s) appears in the HTML correctly.
+5. The date is properly formatted (as, for instance, 2024-09-30) under the word PUBLISHED or MODIFIED in the HTML.
+6. There is a table of contents which appears in the HTML and has exactly 14 sections, whose names match those used in the Project A Plan Template.
+7. When we click on the table of contents in the HTML to visit the session information (Section 14), it works. 
+
+### Element C. (Plan Section 1. R Packages)
+
+1. The janitor, naniar, easystats and tidyverse packages and perhaps other packages are loaded with `library()` as part of section 1, with the tidyverse loaded last.
+2. No packages in the core tidyverse (all of which load with library(tidyverse)) are loaded separately. The core tidyverse packages are dplyr, ggplot2, tidyr, readr, purrr, tibble, stringr and forcats.
+3. No package is loaded more than once.
+4. `#| message: false` is used in the code chunk for Section 1 so that all messages associated with package loading are silenced.
+
+### Element D. (Plan Section 2. Data Ingest)
+
+1. The data should be ingested into `chr_2025_raw` using `read_csv()` and thus creating a tibble, while eliminating the correct row, as described in [Data Task 1 from the Data page](https://thomaselove.github.io/431-projectA-2025/data.html#data-task-1.-ingest-the-raw-data).
+2. The `chr_2025_raw` tibble is then filtered to the ranked counties properly, and the resulting tibble should display 3088 rows and 90 columns (we suggest using the dim() function to verify that this is true.)
+
+### Element E. (Plan Section 3: State Selection)
+
+1. The six states selected are clearly indicated by postal abbreviation code and name, following the instructions in [Data Task 2](https://thomaselove.github.io/431-projectA-2025/data.html#data-task-2.-select-six-states).
+2. There is a clear English sentence (or two) describing why you selected the states you selected.
+3. You then filter the tibble to include only the ranked counties from your six states, and you demonstrate that this leads to a total number of counties between 300 and 800. (This should be demonstrated in code, and with a sentence.)
+4. No counties are dropped from the states you selected.
+
+### Element F. (Plan Section 4: Variable Selection)
+
+1. You have followed the instructions in [Data Task 3](https://thomaselove.github.io/431-projectA-2025/data.html#data-task-3.-select-analytic-variables) to develop code that identifies and selects nine variables, including the four that are required (fipscode, county, state and county_clustered), and five more (each of which are different) that you have selected.
+2. All five of your selected variables are permitted for the use you're making of them, as specified in [Data Task 3 Table B](https://thomaselove.github.io/431-projectA-2025/data.html#table-b.-variables-you-can-select).
+
+### Element G. (Plan Section 5: Variable Cleaning and Renaming)
+
+1. You have followed the instructions in [Data Task 3](https://thomaselove.github.io/431-projectA-2025/data.html#clean-and-rename-your-selected-variables) to complete appropriate cleaning of each variable that needs it, and replacement of the initial versions of these variables with your cleaned alternative.
+2. You have clearly indicated in Section 5 what role each outcome will play, and its initial name (from CHR 2025) along with its new name and description.
+
+### Element H. (Plan Section 6: Creating the Analysis 2 Predictor)
+
+1. You have followed the instructions in [Data Task 4](https://thomaselove.github.io/431-projectA-2025/data.html#data-task-4.-create-a-factor-for-the-analysis-2-predictor) to develop the binary factor you will use as your Analysis 2 predictor.
+2. You have clearly identified the variable being used, and described the exact cut points you used to create the low and high groups in one or two complete English sentences.
+3. You demonstrate using code that approximately 40% of your observations are in the low group and 40% are in the high group, with missing results for the middle 20%. 
+
+### Element I. (Plan Section 7: Adding CHR 2019 Data for the Analysis 3 Outcome)
+
+1. You have followed the instructions in [Data Task 5](https://thomaselove.github.io/431-projectA-2025/data.html#data-task-5.-add-data-from-chr-2019-for-your-analysis-3-outcome) to include the 2019 version of your Analysis 3 outcome in your tibble.
+2. You have used left_join() to join the files.
+3. You have renamed the two variables (2025 version and 2019 version) appropriately.
+
+### Element J. (Plan Section 8: Arranging and Saving the Analytic Tibble)
+
+1. You have arranged the variables in the order specified in [Data Task 6](https://thomaselove.github.io/431-projectA-2025/data.html#data-task-6.-re-order-variables-and-save-the-final-chr_2025-tibble).
+2. The resulting Rds file is saved to a file called `chr_2025_YOURNAME.Rds` where your name is substituted in for YOURNAME, and which is part of your Canvas submission.
+
+### Element K. (Plan Section 9: Print the Tibble)
+
+1. You print the tibble by typing in chr_2025, with no other code.
+2. The resulting tibble is a tibble which shows the first 10 rows, and appropriate labels for your columns.
+3. The types of variables listed should match our expectations, specifically: `fipscode` and `county` are character variables, `state` and your Analysis 2 binary predictor are factors, and the other 7 variables are numeric (double-precision).
+
+### Element L. (Plan Section 10: Numerical Summaries)
+
+1. In section 10.1, you've run code successfully to do [what is asked of you](https://thomaselove.github.io/431-projectA-2025/plan.html#section-10.1-table-of-states-by-binary-factor) (Table of States by Binary Factor). In particular, you've used `tabyl()` properly, and show row and column marginal totals, including for missing values of your binary predictor. Explanatory text is welcome but not required in this section.
+2. In section 10.2, you've run `describe_distribution()` properly on the entire tibble, [as asked of you](https://thomaselove.github.io/431-projectA-2025/plan.html#section-10.2-describe_distribution-results). Explanatory text is welcome but not required in this section.
+3. In section 10.3, you've run `data_codebook()` properly on the whole data set, using the settings `max_values = 6, range_at = 15)` without any errors or warnings happening, [as requested](https://thomaselove.github.io/431-projectA-2025/plan.html#section-10.3-data_codebook-results). You then include at least one English sentence to verify the issues described there, specifically regarding whether the minimum and maximum values of the quantitative data elements make sense, and that the amount of missingness meets [our requirements](https://thomaselove.github.io/431-projectA-2025/plan.html#section-10.3-data_codebook-results) for each variable.
+4. In section 10.4, you've provided counts of distinct values, [as requested](https://thomaselove.github.io/431-projectA-2025/plan.html#section-10.4-distinct-values) and we can see the results for all eleven variables. You also have a sentence or two showing that the checks of distinct `fipscode`s (a unique code for each row) and at least 15 unique values for each of the outcomes and the quantitative predictor exist.
+
+### Element M. (Plan Section 11: The Codebook)
+
+1. You have a sentence stating the number of counties (should be 300-800) and variables (should be eleven) in your tibble. If we use the dim() function, we should get the same answer you did.
+2. You have an attractively formatted, readable codebook that looks nice in your HTML which contains all five required parts for each of the 11 variables in your data, [as specified](https://thomaselove.github.io/431-projectA-2025/plan.html#section-11.-the-codebook). The five required columns of the table are the variable's (1) name in your tibble, (2) its role, (3) its original vXXX code, (4) the definition (including units) and (5) the year(s) in which the variable was measured.
+
+### Element N. (Plan Section 12: Research Questions)
+
+1. You have carefully followed the detailed advice provided in [Section 12 of the Plan Instructions](https://thomaselove.github.io/431-projectA-2025/plan.html#section-12.-your-research-questions).
+2. For each of the three Analyses, you provide a clear research question which is written using appropriate syntax and grammar and **ends with a question mark**.
+3. Your proposed research question for each Analysis matches the task for that Analysis.
+4. You have included a statement about your pre-data analysis belief about what will happen for Analysis 1, at least.
+
+### Element O. (Plan Section 13: Plan Reflection)
+
+1. Your reflection is a paragraph describing the most challenging (or difficult) part of completing the work so far, and how you were able to overcome whatever it was that was most challenging.
+2. Your paragraph is written in strong and clear English sentences, with attention paid to grammar, syntax and spelling. 
+3. It is clear to us from reading the reflection what your biggest issue was, and how you tried to address it.
+
+### Element P. (Plan Section 14: AI Usage)
+
+1. We want to see complete sentences here.
+
+### Element Q. (Plan Section 15: Session Information)
+
+1. We would prefer that this indicates that R version 4.4.1. is used. If you cannot use R 4.4.1, you should describe a meaningful reason to us here.
+2. We’re OK with either the xfun or sessioninfo package’s session information function, but prefer `xfun()`
+
+### Element R. (Miscellaneous)
+
+1. There are no more than 2 spelling, typographical or grammatical errors in the document as a whole that we catch. Please run a spell check by hitting F7 on your Quarto before rendering it a final time, and then look at your HTML file to see if any of the headings, graphs or other elements look strange or don’t show up.
+2. No package is loaded outside of Section 1.
+3. No non-tibble data frame should ever be printed in Project A. 
+4. No tibble should be printed anywhere other than in [Plan Section 9](https://thomaselove.github.io/431-projectA-2025/plan.html#section-9.-print-the-tibble).
+5. You make no changes to the tibble after Section 8.
+

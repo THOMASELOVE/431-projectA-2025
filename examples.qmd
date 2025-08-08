@@ -1,0 +1,33 @@
+---
+title: "Project A Examples"
+author: "Thomas E. Love, Ph.D."
+date-modified: last-modified
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+```
+
+# Project A Plan Materials
+
+1. The **Project A Plan template**, is available as part of [the 431-data site](https://github.com/THOMASELOVE/431-data). It is called `projectA-plan-template.qmd`. 
+
+2. The quarto file for a **sample Project A Plan** using older CHR data is also available, so you can run it and then see a bit of what we're looking for. This is also found at [the 431-data site](https://github.com/THOMASELOVE/431-data). It is called `projectA-sample-plan.qmd`. 
+
+3. Don't forget to look at the Checklist at the bottom of the [Plan instructions](plan.qmd)
+
+# Project A Portfolio Report Materials
+
+4. The **Project A Portfolio Report template** is also available as part of [the 431-data site](https://github.com/THOMASELOVE/431-data). It is called `projectA-portfolio-report-template.qmd`. 
+
+:::{.callout-note}
+
+The Template for the Portfolio Report is identical to the Template for the Project A Plan except that it:
+
+- deletes the old section 13, and 
+- adds in headings for the new sections 13-16, while 
+- moving the AI usage from section 14 to section 17, and
+- moving the session information from section 15 to section 18.
+
+:::
+

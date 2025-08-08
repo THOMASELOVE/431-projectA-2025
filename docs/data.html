@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Thomas E. Love, Ph.D.">
+
+<title>Project A Data – 431 Project A</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7d936024ffa7284ad28c4a5cbc1ff5ea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">431 Project A</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./data.html" aria-current="page"> 
+<span class="menu-text">Data</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./plan.html"> 
+<span class="menu-text">Plan</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./analyses.html"> 
+<span class="menu-text">Analyses</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./portfolio.html"> 
+<span class="menu-text">Portfolio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./examples.html"> 
+<span class="menu-text">Examples</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://thomaselove.github.io/431-2025/contact.html"> 
+<span class="menu-text">Contact Us</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://thomaselove.github.io/431-2025"> 
+<span class="menu-text">431 Homepage</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-data-will-i-use" id="toc-what-data-will-i-use" class="nav-link active" data-scroll-target="#what-data-will-i-use"><span class="header-section-number">1</span> What Data Will I Use?</a></li>
+  <li><a href="#developing-the-data-data-tasks" id="toc-developing-the-data-data-tasks" class="nav-link" data-scroll-target="#developing-the-data-data-tasks"><span class="header-section-number">2</span> Developing the Data: Data Tasks</a></li>
+  <li><a href="#data-task-1.-ingest-the-raw-data" id="toc-data-task-1.-ingest-the-raw-data" class="nav-link" data-scroll-target="#data-task-1.-ingest-the-raw-data"><span class="header-section-number">3</span> Data Task 1. Ingest the raw data</a></li>
+  <li><a href="#data-task-2.-select-six-states" id="toc-data-task-2.-select-six-states" class="nav-link" data-scroll-target="#data-task-2.-select-six-states"><span class="header-section-number">4</span> Data Task 2. Select six states</a>
+  <ul class="collapse">
+  <li><a href="#table-a.-states-you-can-select" id="toc-table-a.-states-you-can-select" class="nav-link" data-scroll-target="#table-a.-states-you-can-select"><span class="header-section-number">4.1</span> Table A. States You Can Select</a></li>
+  </ul></li>
+  <li><a href="#data-task-3.-select-analytic-variables" id="toc-data-task-3.-select-analytic-variables" class="nav-link" data-scroll-target="#data-task-3.-select-analytic-variables"><span class="header-section-number">5</span> Data Task 3. Select analytic variables</a>
+  <ul class="collapse">
+  <li><a href="#variables-for-each-analysis" id="toc-variables-for-each-analysis" class="nav-link" data-scroll-target="#variables-for-each-analysis"><span class="header-section-number">5.1</span> Variables for Each Analysis</a></li>
+  <li><a href="#information-to-help-select-and-build-a-codebook" id="toc-information-to-help-select-and-build-a-codebook" class="nav-link" data-scroll-target="#information-to-help-select-and-build-a-codebook"><span class="header-section-number">5.2</span> Information to help select and build a codebook</a></li>
+  <li><a href="#table-b.-variables-you-can-select" id="toc-table-b.-variables-you-can-select" class="nav-link" data-scroll-target="#table-b.-variables-you-can-select"><span class="header-section-number">5.3</span> Table B. Variables You Can Select</a></li>
+  <li><a href="#clean-and-rename-your-selected-variables" id="toc-clean-and-rename-your-selected-variables" class="nav-link" data-scroll-target="#clean-and-rename-your-selected-variables"><span class="header-section-number">5.4</span> Clean and Rename Your Selected Variables</a></li>
+  </ul></li>
+  <li><a href="#data-task-4.-create-a-factor-for-the-analysis-2-predictor" id="toc-data-task-4.-create-a-factor-for-the-analysis-2-predictor" class="nav-link" data-scroll-target="#data-task-4.-create-a-factor-for-the-analysis-2-predictor"><span class="header-section-number">6</span> Data Task 4. Create a factor for the Analysis 2 predictor</a></li>
+  <li><a href="#data-task-5.-add-data-from-chr-2019-for-your-analysis-3-outcome" id="toc-data-task-5.-add-data-from-chr-2019-for-your-analysis-3-outcome" class="nav-link" data-scroll-target="#data-task-5.-add-data-from-chr-2019-for-your-analysis-3-outcome"><span class="header-section-number">7</span> Data Task 5. Add data from CHR 2019 for your Analysis 3 outcome</a>
+  <ul class="collapse">
+  <li><a href="#sources-and-years-for-chr-2019-variables" id="toc-sources-and-years-for-chr-2019-variables" class="nav-link" data-scroll-target="#sources-and-years-for-chr-2019-variables"><span class="header-section-number">7.1</span> Sources and Years for CHR 2019 Variables</a></li>
+  </ul></li>
+  <li><a href="#data-task-6.-re-order-variables-and-save-the-final-chr_2025-tibble" id="toc-data-task-6.-re-order-variables-and-save-the-final-chr_2025-tibble" class="nav-link" data-scroll-target="#data-task-6.-re-order-variables-and-save-the-final-chr_2025-tibble"><span class="header-section-number">8</span> Data Task 6. Re-order variables and save the final <code>chr_2025</code> tibble</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Project A Data</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Thomas E. Love, Ph.D. </p>
+          </div>
+  </div>
+    
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">2025-08-08</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before starting your Data work, it’s a <strong>really</strong> good idea to read through:</p>
+<ul>
+<li>this entire Data page</li>
+<li>the entire Project A <a href="./plan.html">Plan page</a>, and</li>
+<li>the <a href="./examples.html">Examples material</a> related to the Project A Plan, specifically the Project A Plan template.</li>
+</ul>
+<p>Trust us. You’ll save <strong>a lot</strong> of time and energy if you do so.</p>
+</div>
+</div>
+<section id="what-data-will-i-use" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> What Data Will I Use?</h1>
+<p>Your Project A will use the 2025 version of the analytic data from <a href="https://www.countyhealthrankings.org/">County Health Rankings</a> (<strong>CHR 2025</strong>) for most of the work<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Some prior CHR data has been part of our course, but you’ll obtain, clean and manage a new data set for Project A.</p>
+<p>The key elements we’ll use are found in the <a href="https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation">Rankings Data &amp; Documentation section</a> at the County Health Rankings website, specifically the National Data &amp; Documentation section site for the 2025 County Health Rankings. Specifically, you’ll need to download four files in order to get and use the data:</p>
+<ul>
+<li><a href="https://www.countyhealthrankings.org/sites/default/files/media/document/analytic_data2025.csv">the 2025 CHR CSV Analytic Data</a> (a .csv file)</li>
+<li><a href="https://www.countyhealthrankings.org/sites/default/files/media/document/DataDictionary_2025.pdf">the 2025 Data Dictionary</a> (PDF)</li>
+<li><a href="https://www.countyhealthrankings.org/sites/default/files/media/document/2025%20CHR%20CSV%20SAS%20Analytic%20Documentation.pdf">the 2025 Technical Document</a></li>
+</ul>
+<p>In addition, when building the Codebook as part of your <a href="./plan.html">Project A Plan</a>, you’ll use <a href="https://www.countyhealthrankings.org/health-data/county-health-rankings-measures">this CHR 2025 Measures link</a> to obtain further details on the variables you select.</p>
+</section>
+<section id="developing-the-data-data-tasks" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Developing the Data: Data Tasks</h1>
+<p>Obtaining and cleaning your data takes a little while, but you can start at any time. First, in broad terms, here are the six data tasks you need to complete in order to build your Project A Plan.</p>
+<ol type="1">
+<li>Ingest the raw data from CHR 2025 into a tibble in R called <code>chr_2025_raw</code>, then filter these raw data to only the counties actually ranked by CHR.</li>
+<li>In addition to Ohio, select five more states (from a set we provide) to study, so that you wind up with at least 300 and no more than 800 counties in your study. Create a new <code>chr_2025</code> tibble that contains only the counties from your chosen six states (including Ohio).</li>
+<li>Reduce your data to a selection of nine variables (4 we specify below and 5 more you’ll select from options we provide), rename them in helpful ways, clean up problems, then save this smaller tibble as <code>chr_2025</code>.</li>
+<li>Create a new binary factor (categorical variable) from the fourth of the 5 variables you selected in the previous task, and add it to <code>chr_2025</code> so it now contains 10 variables.</li>
+<li>Pull into your <code>chr_2025</code> tibble data from the 2019 County Health Rankings on the fifth of the 5 variables selected in Task 3 using a data set we provide, so you can complete Analysis 3, and will now have 11 variables.</li>
+<li>Save the resulting <code>chr_2025</code> tibble as an R data set with 11 variables, and you will share this new <code>.Rds</code> file with us as part of your Project A Plan.</li>
+</ol>
+</section>
+<section id="data-task-1.-ingest-the-raw-data" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Data Task 1. Ingest the raw data</h1>
+<p>Begin an R Project just for Project A, and create a Quarto file within that project where you will do your data development work. Working from a template, or from your own best understanding of what works well for you, start by loading the packages you’ll need, including the <code>tidyverse</code> and any other packages you plan to use.</p>
+<p>You’ll use <code>read_csv()</code> to ingest your raw <code>.csv</code> file into R and call the resulting tibble <strong>chr_2025_raw</strong>. But as you do this, you’ll need to remove the top row from the .csv within your R code. You should probably look at the raw .csv in Excel or another spreadsheet system so that you know why we need to do this. To accomplish this, we’ll use the <code>skip = 1</code> command within your <code>read_csv()</code> call.</p>
+<p>At the same times, we’ll restrict which variables we ingest to the “raw value” versions of the main CHR variables, so that we focus only on variables we plan to actually consider using. This requires a <code>select()</code> statement after the <code>read_csv()</code> to pull in the variables we’ll need, including several whose names end with <code>rawvalue</code></p>
+<p>Sample code follows:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>data_url <span class="ot">&lt;-</span> </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://www.countyhealthrankings.org/sites/default/files/media/document/analytic_data2025.csv"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>chr_2025_raw <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(data_url, <span class="at">skip =</span> <span class="dv">1</span>, <span class="at">guess_max =</span> <span class="dv">4000</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                         <span class="at">show_col_types =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(fipscode, county, state, county_clustered, year,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>         <span class="fu">ends_with</span>(<span class="st">"rawvalue"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This code should create a <code>chr_2025_raw</code> tibble with 3195 rows (observations) and 90 columns (variables).</p>
+<p>To complete Task 1, you’ll need to augment the code above to restrict the <code>chr_2025_raw</code> data to include only the <strong>3088</strong> rows which have “county_clustered” values of 1, since the other rows will not be used by us in this project. At the end of Task 1, your <code>chr_2025_raw</code> tibble should have 3088 rows (counties) and 90 columns (variables).</p>
+</section>
+<section id="data-task-2.-select-six-states" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Data Task 2. Select six states</h1>
+<p>Now we’ll filter the <code>chr_2025_raw</code> data into a new tibble called <strong>chr_2025</strong> which contains the 300-800 rows (counties) you will actually study in your project.</p>
+<p>Your selection must include six of the states listed in the Table below, including:</p>
+<ul>
+<li>the 88 counties of Ohio, and</li>
+<li>all of the counties in <strong>five</strong> additional US states</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>You will need to write a sentence or two in your Project A Plan describing the reason for your selection of states, so you should have one.</p></li>
+<li><p>Don’t forget to filter in Task 1 so that only those rows with <code>county_clustered</code> values of 1 are included. Otherwise, your counts won’t match those shown in the table below.</p></li>
+<li><p>The table excludes Alaska, Arizona, Connecticut, Delaware, District of Columbia, Hawaii, Maine, Massachusetts, Nevada, New Hampshire, Rhode Island and Vermont because they have fewer than 20 ranked counties or are missing meaningful data on key outcomes.</p></li>
+</ol>
+</div>
+</div>
+<section id="table-a.-states-you-can-select" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="table-a.-states-you-can-select"><span class="header-section-number">4.1</span> Table A. States You Can Select</h2>
+<p>The number of counties (with <code>county_clustered</code> values of 1 in CHR 2025) in each state (specified using its two-letter postal abbreviation) is listed below, for your convenience.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 17%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 17%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 17%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><code>state</code></th>
+<th style="text-align: center;">State <br> Name</th>
+<th style="text-align: right;">clustered <br> counties</th>
+<th style="text-align: center;"><code>state</code></th>
+<th style="text-align: center;">State <br> Name</th>
+<th style="text-align: right;">clustered <br> counties</th>
+<th style="text-align: center;"><code>state</code></th>
+<th style="text-align: center;">State <br> Name</th>
+<th style="text-align: right;">clustered <br> counties</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>AL</strong></td>
+<td style="text-align: center;">Alabama</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: center;"><strong>MD</strong></td>
+<td style="text-align: center;">Maryland</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: center;"><strong>OK</strong></td>
+<td style="text-align: center;">Oklahoma</td>
+<td style="text-align: right;">77</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>AR</strong></td>
+<td style="text-align: center;">Arkansas</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: center;"><strong>MI</strong></td>
+<td style="text-align: center;">Michigan</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: center;"><strong>OR</strong></td>
+<td style="text-align: center;">Oregon</td>
+<td style="text-align: right;">36</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>CA</strong></td>
+<td style="text-align: center;">California</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: center;"><strong>MN</strong></td>
+<td style="text-align: center;">Minnesota</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: center;"><strong>PA</strong></td>
+<td style="text-align: center;">Pennsylvania</td>
+<td style="text-align: right;">67</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>CO</strong></td>
+<td style="text-align: center;">Colorado</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: center;"><strong>MO</strong></td>
+<td style="text-align: center;">Missouri</td>
+<td style="text-align: right;">115</td>
+<td style="text-align: center;"><strong>SC</strong></td>
+<td style="text-align: center;">South Carolina</td>
+<td style="text-align: right;">46</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>FL</strong></td>
+<td style="text-align: center;">Florida</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: center;"><strong>MS</strong></td>
+<td style="text-align: center;">Mississippi</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: center;"><strong>SD</strong></td>
+<td style="text-align: center;">South Dakota</td>
+<td style="text-align: right;">62</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>GA</strong></td>
+<td style="text-align: center;">Georgia</td>
+<td style="text-align: right;">159</td>
+<td style="text-align: center;"><strong>MT</strong></td>
+<td style="text-align: center;">Montana</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: center;"><strong>TN</strong></td>
+<td style="text-align: center;">Tennessee</td>
+<td style="text-align: right;">95</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>IA</strong></td>
+<td style="text-align: center;">Iowa</td>
+<td style="text-align: right;">99</td>
+<td style="text-align: center;"><strong>NC</strong></td>
+<td style="text-align: center;">North Carolina</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: center;"><strong>TX</strong></td>
+<td style="text-align: center;">Texas</td>
+<td style="text-align: right;">244</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>ID</strong></td>
+<td style="text-align: center;">Idaho</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: center;"><strong>ND</strong></td>
+<td style="text-align: center;">North Dakota</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: center;"><strong>UT</strong></td>
+<td style="text-align: center;">Utah</td>
+<td style="text-align: right;">26</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>IL</strong></td>
+<td style="text-align: center;">Illinois</td>
+<td style="text-align: right;">102</td>
+<td style="text-align: center;"><strong>NE</strong></td>
+<td style="text-align: center;">Nebraska</td>
+<td style="text-align: right;">79</td>
+<td style="text-align: center;"><strong>VA</strong></td>
+<td style="text-align: center;">Virginia</td>
+<td style="text-align: right;">133</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>IN</strong></td>
+<td style="text-align: center;">Indiana</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: center;"><strong>NJ</strong></td>
+<td style="text-align: center;">New Jersey</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: center;"><strong>WA</strong></td>
+<td style="text-align: center;">Washington</td>
+<td style="text-align: right;">39</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>KS</strong></td>
+<td style="text-align: center;">Kansas</td>
+<td style="text-align: right;">104</td>
+<td style="text-align: center;"><strong>NM</strong></td>
+<td style="text-align: center;">New Mexico</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: center;"><strong>WI</strong></td>
+<td style="text-align: center;">Wisconsin</td>
+<td style="text-align: right;">72</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>KY</strong></td>
+<td style="text-align: center;">Kentucky</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: center;"><strong>NY</strong></td>
+<td style="text-align: center;">New York</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: center;"><strong>WV</strong></td>
+<td style="text-align: center;">West Virginia</td>
+<td style="text-align: right;">55</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>LA</strong></td>
+<td style="text-align: center;">Louisiana</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: center;"><strong>OH</strong></td>
+<td style="text-align: center;"><strong>Ohio</strong></td>
+<td style="text-align: right;"><strong>88</strong></td>
+<td style="text-align: center;"><strong>WY</strong></td>
+<td style="text-align: center;">Wyoming</td>
+<td style="text-align: right;">23</td>
+</tr>
+</tbody>
+</table>
+<p>Remember to select six states (including <code>OH</code>) yielding a total of 300-800 counties.</p>
+<ul>
+<li>For example, one possible combination would be <code>IN</code> (92), <code>MD</code> (24), <code>NJ</code> (21), <code>OR</code> (36) and <code>WA</code> (39) with <code>OH</code> (88) yielding exactly 300 counties.</li>
+<li>another possibility would be <code>GA</code> (159), <code>TX</code> (244), <code>IL</code> (102), <code>MN</code> (87) and <code>KY</code> (120) with <code>OH</code> (88) yielding exactly 800 counties.</li>
+</ul>
+<p>After making your selection, and filtering the data, you should have a tibble called <code>chr_2025</code> which contains all of the 300-800 counties in your six states, and 90 columns. Be sure that the <code>state</code> variable is now a <em>factor</em> variable, rather than just a <code>character</code> variable in your tibble.</p>
+</section>
+</section>
+<section id="data-task-3.-select-analytic-variables" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Data Task 3. Select analytic variables</h1>
+<p>Next, you will select exactly nine variables (columns) from the 90 you should have at the start of Task 3. These nine variables must include the following four:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 83%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Variable <br> Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><code>fipscode</code></td>
+<td>the five-digit FIPS code for the county, which will be a convenient ID variable that is distinct for each row in your tibble</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><code>county</code></td>
+<td>the name of the county, which will be useful for labeling and identifying the counties</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><code>state</code></td>
+<td>a multi-categorical (with 6 levels) variable of two-letter postal abbreviations for your six selected states (as mentioned above, this should be a factor in R)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><code>county_clustered</code></td>
+<td>tells us whether the row should be included in our data <br> (all rows should have <code>county_clustered == 1</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>This set of four variables will then be followed by five variables that you will select from Table B, below.</p>
+<section id="variables-for-each-analysis" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="variables-for-each-analysis"><span class="header-section-number">5.1</span> Variables for Each Analysis</h2>
+<p>Each of the variables you select should be of some interest to you on its own, in terms of either providing a health outcome of interest, or potentially providing useful information about a feature of the county that might relate to that health outcome. As part of the selection process, you should be developing appropriate <strong>research questions</strong> that lead to the identification of smart measures of interest (from those available) for predictors and outcomes in our Analyses. See the Project A <a href="./plan.html">Plan page</a> in these instructions for more on creating appropriate research questions.</p>
+<p>You must select five <strong>different</strong> variables from Table B, as described below.</p>
+<ol type="1">
+<li>Variable 1 will be your outcome for Analysis 1. It should be a measure describing some aspect of a community’s health, rather than a demographic characteristic. Variables listed in Table B as Analysis 1 or 2 (predictor) should not be used as outcomes for either Analysis 1 or 2. As a result, you will be choosing one of these 20 variables for your Analysis 1 outcome:
+<ul>
+<li><code>v001</code>, <code>v002</code>, <code>v009</code>, <code>v011</code>, <code>v036</code>, <code>v042</code>, <code>v044</code>, <code>v049</code>, <code>v050</code>, <code>v060</code>, <code>v067</code>, <code>v070</code>, <code>v125</code>, <code>v127</code>, <code>v136</code>, <code>v139</code>, <code>v140</code>, <code>v143</code>, <code>v155</code>, or <code>v166</code>.</li>
+</ul></li>
+<li>Variable 2 will be your predictor for Analysis 1, so the relationship between variables 1 and 2 should be of interest to you.
+<ul>
+<li>You can select any of the 30 variables in Table B for your Analysis 1 predictor.</li>
+</ul></li>
+<li>Variable 3 will be your outcome for Analysis 2. Like variable 1, it should describe some aspect of a community’s health, rather than just its demographics.
+<ul>
+<li>You can select any of the 20 variables eligible to be your Analysis 1 outcome as your Analysis 2 outcome.</li>
+</ul></li>
+<li>Variable 4 (after you categorize it, later) will be your predictor for Analysis 2. Again, the relationship between variables 3 and 4 should be of interest.
+<ul>
+<li>You can select any of the 30 variables in Table B for your Analysis 2 predictor.</li>
+</ul></li>
+<li>Variable 5 is your Analysis 3 outcome, which you will compare to its CHR 2019 value in the County Health Rankings data. This is restricted a bit more, and Table B shows 10 options for Analysis 3.
+<ul>
+<li>These 10 options are: <code>v009</code>, <code>v011</code>, <code>v036</code>, <code>v042</code>, <code>v049</code>, <code>v060</code>, <code>v070</code>, <code>v127</code>, <code>v139</code>, or <code>v143</code>.</li>
+</ul></li>
+</ol>
+<p>Remember that each of your five selections must be a different variable.</p>
+</section>
+<section id="information-to-help-select-and-build-a-codebook" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="information-to-help-select-and-build-a-codebook"><span class="header-section-number">5.2</span> Information to help select and build a codebook</h2>
+<p>The <a href="https://www.countyhealthrankings.org/sites/default/files/media/document/2025%20CHR%20CSV%20SAS%20Analytic%20Documentation.pdf">2025 CHR Technical Document</a> file (PDF), and the <a href="https://www.countyhealthrankings.org/sites/default/files/media/document/DataDictionary_2025.pdf">2025 Data Dictionary</a> file (also PDF) are crucial here, as those are the ones that explain what the available variables mean, and how they should be labeled.</p>
+<ul>
+<li>In building your codebook for the Project A Plan, you will also need look up each measure you select at <a href="https://www.countyhealthrankings.org/health-data/county-health-rankings-measures">this CHR 2025 Measures link</a>, so now would be a good time to do that, as well.</li>
+</ul>
+</section>
+<section id="table-b.-variables-you-can-select" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="table-b.-variables-you-can-select"><span class="header-section-number">5.3</span> Table B. Variables You Can Select</h2>
+<p>You will select <strong>five different</strong> variables from the list in Table B of variables in the CHR 2025 report.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>The listing “v001” in Table B refers to the variable named “<strong>v001_rawvalue</strong>”, and <code>_rawvalue</code> should be similarly appended to each of the other variable codes.</li>
+<li>There are many <code>vXXX_rawvalue</code> variables in the CHR data which we don’t include in the list below, for several reasons, but usually because of substantial missing data.</li>
+</ol>
+</div>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 34%">
+<col style="width: 10%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Variable</th>
+<th>Brief Label from CHR</th>
+<th style="text-align: center;">Analyses</th>
+<th>Cleaning Requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v001</code></strong></td>
+<td>Premature death</td>
+<td style="text-align: center;">1 or 2</td>
+<td>Divide by 100 to represent losses per 1000 population. Don’t use <code>v127</code> in same analysis.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v002</code></strong></td>
+<td>Poor or fair health</td>
+<td style="text-align: center;">1 or 2</td>
+<td>Multiply by 100 to describe <em>percentage</em>, rather than proportion</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v009</code></strong></td>
+<td>Adult smoking</td>
+<td style="text-align: center;">1, 2 or 3</td>
+<td>Multiply by 100 to describe <em>percentage</em>, rather than proportion</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v011</code></strong></td>
+<td>Adult obesity</td>
+<td style="text-align: center;">1, 2 or 3</td>
+<td>Multiply by 100 to describe <em>percentage</em>, rather than proportion</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v023</code></strong></td>
+<td>Unemployment</td>
+<td style="text-align: center;">1 or 2 <br> (predictor)</td>
+<td>Multiply by 100 to describe <em>percentage</em>, rather than proportion</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v036</code></strong></td>
+<td>Poor physical health days</td>
+<td style="text-align: center;">1, 2 or 3</td>
+<td>OK as is.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v042</code></strong></td>
+<td>Poor mental health days</td>
+<td style="text-align: center;">1, 2 or 3</td>
+<td>OK as is.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v044</code></strong></td>
+<td>Income inequality</td>
+<td style="text-align: center;">1 or 2</td>
+<td>OK as is.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v049</code></strong></td>
+<td>Excessive drinking</td>
+<td style="text-align: center;">1, 2 or 3</td>
+<td>Multiply by 100 to describe <em>percentage</em>, rather than proportion</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v050</code></strong></td>
+<td>Mammography screening</td>
+<td style="text-align: center;">1 or 2</td>
+<td>Multiply by 100 to describe <em>percentage</em>, rather than proportion</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v053</code></strong></td>
+<td>Proportion ages 65 and older</td>
+<td style="text-align: center;">1 or 2 <br> (predictor)</td>
+<td>Multiply by 100 to describe <em>percentage</em>, rather than proportion</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v057</code></strong></td>
+<td>Proportion female</td>
+<td style="text-align: center;">1 or 2 <br> (predictor)</td>
+<td>Multiply by 100 to describe <em>percentage</em>, rather than proportion</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v058</code></strong></td>
+<td>Proportion rural</td>
+<td style="text-align: center;">1 or 2 <br> (predictor)</td>
+<td>Multiply by 100 to describe <em>percentage</em>, rather than proportion</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v059</code></strong></td>
+<td>Proportion not proficient in English</td>
+<td style="text-align: center;">1 or 2 <br> (predictor)</td>
+<td>Multiply by 100 to describe <em>percentage</em>, rather than proportion</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v060</code></strong></td>
+<td>Diabetes prevalence</td>
+<td style="text-align: center;">1, 2 or 3</td>
+<td>Multiply by 100 to describe <em>percentage</em>, rather than proportion</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v063</code></strong></td>
+<td>Median household income</td>
+<td style="text-align: center;">1 or 2 <br> (predictor)</td>
+<td>Divide by 1000 to represent income in thousands of dollars</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v067</code></strong></td>
+<td>Driving alone to work</td>
+<td style="text-align: center;">1 or 2</td>
+<td>Multiply by 100 to describe <em>percentage</em>, rather than proportion</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v070</code></strong></td>
+<td>Physical inactivity</td>
+<td style="text-align: center;">1, 2 or 3</td>
+<td>Multiply by 100 to describe <em>percentage</em>, rather than proportion</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v085</code></strong></td>
+<td>Uninsured</td>
+<td style="text-align: center;">1 or 2 <br> (predictor)</td>
+<td>Multiply by 100 to describe <em>percentage</em>, rather than proportion</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v125</code></strong></td>
+<td>Air pollution - particulate matter</td>
+<td style="text-align: center;">1 or 2</td>
+<td>OK as is.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v126</code></strong></td>
+<td>Proportion non-hispanic white</td>
+<td style="text-align: center;">1 or 2 <br> (predictor)</td>
+<td>Multiply by 100 to describe <em>percentage</em>, rather than proportion. Also, see note below.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v127</code></strong></td>
+<td>Premature age-adjusted mortality</td>
+<td style="text-align: center;">1, 2 or 3</td>
+<td>OK as is. Do not use in same analysis as <code>v001</code>.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v136</code></strong></td>
+<td>Severe housing problems</td>
+<td style="text-align: center;">1 or 2</td>
+<td>Multiply by 100 to describe <em>percentage</em>, rather than proportion.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v139</code></strong></td>
+<td>Food insecurity</td>
+<td style="text-align: center;">1, 2 or 3</td>
+<td>Multiply by 100 to describe <em>percentage</em>, rather than proportion.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v140</code></strong></td>
+<td>Social associations</td>
+<td style="text-align: center;">1 or 2</td>
+<td>OK as is.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v143</code></strong></td>
+<td>Insufficient sleep</td>
+<td style="text-align: center;">1, 2 or 3</td>
+<td>Multiply by 100 to describe <em>percentage</em>, rather than proportion</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v151</code></strong></td>
+<td>Gender pay gap</td>
+<td style="text-align: center;">1 or 2 <br> (predictor)</td>
+<td>OK as is.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v155</code></strong></td>
+<td>Flu vaccinations</td>
+<td style="text-align: center;">1 or 2</td>
+<td>Multiply by 100 to describe <em>percentage</em>, rather than proportion</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v166</code></strong></td>
+<td>Broadband access</td>
+<td style="text-align: center;">1 or 2</td>
+<td>Multiply by 100 to describe <em>percentage</em>, rather than proportion</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v168</code></strong></td>
+<td>High school completion</td>
+<td style="text-align: center;">1 or 2 <br> (predictor)</td>
+<td>Multiply by 100 to describe <em>percentage</em>, rather than proportion</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>The variable <code>v001</code> is very tempting to use an outcome. That’s OK, but be sure to consider the use of <code>v127</code> as an outcome if mortality interests you. Do not use <code>v001</code> and <code>v127</code> in the same Analysis.</li>
+<li>A serious look at the impact of race/ethnicity is beyond the scope of Project A. If you are interested in studying race and ethnicity and their impact on a health outcome, we suggest using <code>v126</code>, (or its inverse, 1 - <code>v126</code>), to incorporate this dimension as a predictor. This is because there’s more variation in the <code>v126</code> data across the reported counties than other variables describing race or ethnicity.</li>
+<li>The <strong>brief label from CHR</strong> column in Table B are shown in the first (deleted in R) row in the raw .csv file for 2025, and are also specified in the <a href="https://www.countyhealthrankings.org/sites/default/files/media/document/DataDictionary_2025.pdf">2025 CHR Data Dictionary</a> PDF file.</li>
+<li>A key issue for developing these variables is correctly specifying the units of measurement (note that the indexes don’t have units) so that you should be careful to note that in selecting your variables.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="clean-and-rename-your-selected-variables" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="clean-and-rename-your-selected-variables"><span class="header-section-number">5.4</span> Clean and Rename Your Selected Variables</h2>
+<p>Find each of your five selected variables in Table B, then do what is suggested in the <strong>Cleaning Requirements</strong> section of Table B as part of your data development work for that variable. All of your selected variables should be <strong>renamed</strong> (and it would help also to apply <code>clean_names()</code> from the <code>janitor</code> package) so as to have descriptive and maximally helpful variable names.</p>
+<p>Use the (cleaned and renamed) version of each variable in your work going forward.</p>
+<ul>
+<li>For example, if you have decided to use as a quantitative variable something like <code>v009_rawvalue</code>, which is about adult smoking, you should rename the variable <code>v009_rawvalue</code> to <strong>adult_smoking</strong> in your tibble.</li>
+<li>If you plan to use the variable as your categorical predictor, you should still make the appropriate change to the original quantitative version as indicated in Table B.</li>
+</ul>
+</section>
+</section>
+<section id="data-task-4.-create-a-factor-for-the-analysis-2-predictor" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Data Task 4. Create a factor for the Analysis 2 predictor</h1>
+<p>Create a new categorical variables (factor) based on your fourth variable, and add this new factor to your <strong>chr_2025</strong> tibble. You’ll also retain the original (quantitative) version of this variable, so your tibble will now have 10 variables. I’ll describe the three steps here, and then show some sample code.</p>
+<ol type="1">
+<li>Divide the values in your variable 4 into three groups, as follows:
+<ul>
+<li>values in the lowest 40% of your sample’s observations (the low group)</li>
+<li>values in the middle 20% of your sample’s observations (the middle group)</li>
+<li>values in the highest 40% of your sample’s observations (the high group)</li>
+</ul></li>
+<li>Create a new factor which has two levels, low and high (although you can use other labels if you prefer), based on your three-level categorization, and treats the rest (middle group) as missing.
+<ul>
+<li>This should yield (from your original set of 300-800 counties) between 120 and 320 counties having the low level, 120-320 having the high level, and 60-160 missing values in the new factor variable.</li>
+</ul></li>
+<li>Add the resulting (binary) factor to your <strong>chr_2025</strong> tibble.</li>
+</ol>
+<p>Here’s some sample code for these three steps.</p>
+<p>To establish our cutpoints, we should look at the 40th and 60th percentiles of the existing data for our planned predictor for Analysis 2, which I’ll call <code>varXXX</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>chr_2025 <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">q40 =</span> <span class="fu">quantile</span>(varXXX, <span class="fu">c</span>(<span class="fl">0.4</span>)),</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">q60 =</span> <span class="fu">quantile</span>(varXXX, <span class="fu">c</span>(<span class="fl">0.6</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Suppose those results were 7 and 12. Then we want to create a three-level variable where values of 7 and lower will fall in the “Low” group, and values of 12 and higher will fall in the “High” group<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>chr_2025 <span class="ot">&lt;-</span> chr_2025 <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">varXXX_grp =</span> <span class="fu">case_when</span>(</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    varXXX <span class="sc">&lt;=</span> <span class="dv">7</span> <span class="sc">~</span> <span class="st">"Low"</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    varXXX <span class="sc">&gt;=</span> <span class="dv">12</span> <span class="sc">~</span> <span class="st">"High"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">varXXX_grp =</span> <span class="fu">factor</span>(varXXX_grp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This should result in a <code>varXXX_grp</code> variable being in your <code>chr_2025</code> now, where about 40% of our subjects in the High group and about 40% in the Low group, with the rest now listed as missing, and the <code>varXXX_grp</code> variable is now a factor. So you’ll want to demonstrate that all of those things are true in your case.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>If you have any missing values (there won’t be many) in your variable 4, those values should be listed with the missing group in your new factor.</li>
+<li>If <code>v009_rawvalue</code> (about adult smoking) is to be your categorical factor for Analysis 2, then you should include both the original quantitative value (renamed <code>adult_smoking_raw</code>) and your categorical variable that you’ll actually use in analyses, which should be named something like <code>adult_smoking_cat</code> or <code>adult_smoking_grp</code>.</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="data-task-5.-add-data-from-chr-2019-for-your-analysis-3-outcome" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Data Task 5. Add data from CHR 2019 for your Analysis 3 outcome</h1>
+<p>The data in the <code>431-projectA-chr_2019.csv</code> file on our <a href="https://github.com/THOMASELOVE/431-data">431-data</a> repository should be used to pull in the data from CHR 2019.</p>
+<p>Assuming you have placed the <code>431-projectA-chr_2019.csv</code> file in your R Project directory for Project A, then the following code should pull in the information you’ll need into a tibble.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>chr_2019_raw <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"431-projectA-chr_2019.csv"</span>, </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                         <span class="at">guess_max =</span> <span class="dv">4000</span>, </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                         <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>chr_2019_raw <span class="ot">&lt;-</span> chr_2019_raw <span class="sc">|&gt;</span> </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">fipscode =</span> <span class="fu">as.character</span>(fipscode))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now, create a tibble called <strong>chr_2019</strong> containing just two variables: the <code>fipscode</code> and the variable you’re using as your Analysis 3 outcome. Just substitute in the appropriate value for <code>XXX</code> in the code below.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>chr_2019 <span class="ot">&lt;-</span> chr_2019_raw <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(fipscode, vXXX_rawvalue)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Next, join together your chr_2025 data and this new file by levels of <code>fipscode</code>, using the <code>left_join()</code> function from the <code>dplyr</code> package:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>chr_2025 <span class="ot">&lt;-</span> <span class="fu">left_join</span>(chr_2025, chr_2019, <span class="at">by =</span> <span class="st">"fipscode"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now look at your result, and rename the two versions of your Analysis 3 outcome to be something like <strong>adult_smoking_2025</strong> and <strong>adult_smoking_2019</strong>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Across all of the states you might have selected back in Data Task 3, each of these variables has information for <strong>2,957</strong> ranked counties in CHR 2025. However, several counties were ranked in CHR 2025 but not in CHR 2019. When we join the data in CHR 2025 to the data in CHR 2019, there are some counties with missing CHR 2019 data on these variables.</p>
+<p>As a result, depending on what states you selected, this joining may or may not produce missing values in your CHR 2019 version of the Analysis 3 outcome.</p>
+</div>
+</div>
+<section id="sources-and-years-for-chr-2019-variables" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="sources-and-years-for-chr-2019-variables"><span class="header-section-number">7.1</span> Sources and Years for CHR 2019 Variables</h2>
+<p>County Health Rankings data for variables reported in CHR 2019 eligible for use in Project A Analysis 3 are listed below, with their descriptions, including the source and year(s) in which they were gathered. Please incorporate this information into your codebook.</p>
+<p>Similar information for CHR 2025 variables is found at <a href="https://www.countyhealthrankings.org/health-data/county-health-rankings-measures">this link</a>, and should also be placed in your codebook.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 33%">
+<col style="width: 41%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Variable</th>
+<th>Brief Label from CHR</th>
+<th>Source</th>
+<th style="text-align: center;">Year(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v009</code></strong></td>
+<td>Adult smoking</td>
+<td>Behavioral Risk Factor Surveillance System</td>
+<td style="text-align: center;">2016</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v011</code></strong></td>
+<td>Adult obesity</td>
+<td>CDC Diabetes Interactive Atlas</td>
+<td style="text-align: center;">2015</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v036</code></strong></td>
+<td>Poor physical health days</td>
+<td>Behavioral Risk Factor Surveillance System</td>
+<td style="text-align: center;">2016</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v042</code></strong></td>
+<td>Poor mental health days</td>
+<td>Behavioral Risk Factor Surveillance System</td>
+<td style="text-align: center;">2016</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v049</code></strong></td>
+<td>Excessive drinking</td>
+<td>Behavioral Risk Factor Surveillance System</td>
+<td style="text-align: center;">2016</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v060</code></strong></td>
+<td>Diabetes prevalence</td>
+<td>CDC Diabetes Interactive Atlas</td>
+<td style="text-align: center;">2015</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v070</code></strong></td>
+<td>Physical inactivity</td>
+<td>CDC Diabetes Interactive Atlas</td>
+<td style="text-align: center;">2015</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v127</code></strong></td>
+<td>Premature age-adjusted mortality</td>
+<td>CDC WONDER Mortality Data</td>
+<td style="text-align: center;">2015-2017</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v139</code></strong></td>
+<td>Food insecurity</td>
+<td>Map the Meal Gap</td>
+<td style="text-align: center;">2016</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v143</code></strong></td>
+<td>Insufficient sleep</td>
+<td>Behavioral Risk Factor Surveillance System</td>
+<td style="text-align: center;">2016</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="data-task-6.-re-order-variables-and-save-the-final-chr_2025-tibble" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Data Task 6. Re-order variables and save the final <code>chr_2025</code> tibble</h1>
+<p>Revise the <strong>chr_2025</strong> tibble to arrange your final tibble’s 11 variables in the following order:</p>
+<ol type="1">
+<li><code>fipscode</code>,</li>
+<li><code>state</code>,</li>
+<li><code>county</code>,</li>
+<li>your selected (and renamed) variable 1 (Analysis 1 outcome),</li>
+<li>your selected (and renamed) variable 2 (Analysis 1 predictor),</li>
+<li>your selected (and renamed) variable 3 (Analysis 2 outcome),</li>
+<li>your binary factor describing variable 4 (Analysis 2 predictor),</li>
+<li>your original (quantitative version) of variable 4,</li>
+<li>your selected (and renamed) variable 5 (from CHR 2025),</li>
+<li>your selected (and renamed) variable 5 (from CHR 2019),</li>
+<li>the <code>county_clustered</code> variable (whose values must all be 1)</li>
+</ol>
+<p>Save this final <strong>chr_2025</strong> tibble with 11 variables as an R data set (.Rds file) in your R Project, with the file name <strong>chr_2025_YOURNAME.Rds</strong>. You will share this file with us as part of your Project A Plan. If you like, you can store this <code>.Rds</code> file in a <code>data</code> subdirectory within your R Project.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>There are several ways to rearrange columns in a tibble, including the <code>select()</code> and/or <code>relocate()</code> functions from <code>dplyr</code>.</li>
+<li>After your cleaning is done, each row in your <code>chr_2025</code> tibble should contain all of the counties within the 6 states you are studying, and no other counties should be included in your tibble.</li>
+<li>If data for some counties are missing in the raw data for one or more of your variables (and this will be true at least for your binary factor representing low and high levels of variable 4, and perhaps also for your CHR 2019 version of variable 5, and maybe even for some of your other selected variables), then these data should be indicated as missing (using NA) in the tibble.</li>
+<li>There is no need to set a seed in this process, as you are not doing anything that involves selecting a random sample.</li>
+</ol>
+</div>
+</div>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>In Analysis 3, we will also use <strong>CHR 2019</strong> as you’ll see<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>We could have chosen to use “less than 7” and “higher than 12” as well, which would potentially have a small impact on our final groups.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Fall 2025: PQHS/CRSP/MPHP 431 at CWRU with Professor Love</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

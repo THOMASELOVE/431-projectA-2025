@@ -1,0 +1,224 @@
+---
+title: "Project A Analyses"
+author: "Thomas E. Love, Ph.D."
+date-modified: last-modified
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+```
+
+# General Information (applicable to all three Analyses)
+
+Using the tibble you've developed following the instructions on the [Data](data.qmd) and [Plan](plan.qmd) pages, you will perform three analyses, as specified below. Your final portfolio report will include:
+
+- Sections 1-12 from the [Plan](plan.qmd), edited as necessary (note that you'll drop Section 13 from the Plan and move sections 14-15 in the Plan to Sections 17-18 in the Portfolio Report.
+- Section 13 will be your Analysis 1, and will have four subsections.
+- Section 14 will be your Analysis 2, with four subsections.
+- Section 15 will be your Analysis 3, with four subsections.
+- Section 16 will be a new Reflections section, discussed in the [Portfolio](portfolio.qmd) materials.
+- Section 17 will be the location for your updated AI usage statement (you built an earlier version of this in the Plan.)
+- Section 18 will be your new location for session information, as mentioned previously.
+
+The four subsections for each Analysis are to be labeled:
+
+1. Variables
+2. Summaries
+3. Approach
+4. Conclusions
+
+:::{.callout-warning}
+
+All Project A analyses should be performed using **90%** (rather than the default 95%) uncertainty intervals.
+
+:::
+
+## Subsection 1. Variables
+
+For each of the three Analyses, you will start by re-specifying the variables you are studying, including appropriate units of measurement, and briefly remind us about how your sample was developed, including information on the total number of counties involved in this Analysis, specifying which states are used, and whether any relevant data are missing. Be sure to edit your data management and Codebook in sections from your Plan to accurately describe all variables you are using in your analyses. In particular, no additional adjustments to your tibble should be made after section 8 in your portfolio report.
+
+In Plan section 12, you stated the **research question** you are trying to answer with each analysis. You should also indicate in that section your pre-data collection belief about what conclusion you would draw. In developing your final portfolio report, you should edit these statements (as necessary) to reflect the Analyses you've actually done.
+
+## Subsection 2. Summaries
+
+Here, you will provide numerical summaries and visualizations of interest that are **relevant to your analysis**, and comment on any issues you observe. All of your plots should be attractive and well-labeled, and (when possible) use `ggplot` tools. Specific suggestions about necessary data descriptions for each Analysis are discussed below.
+
+## Subsection 3. Approach
+
+Each Analysis should, of course, include all of the R code you used to create your work, **and** complete English sentences that interpret your results. Your work must demonstrate that you are able to reason about what you've done, not just generate the code which works to create results. Here, you will:
+
+- Assess which of several options for modeling (Analysis 1) or creating an inference (Analyses 2 and 3) is most appropriate, with the help of useful diagnostics.
+- Complete any specialized analytic requirements (as discussed below) unique to that Analysis, and obtain results which allow you to address your research question.
+
+## Subsection 4. Conclusions
+
+You will write a two-paragraph conclusions section for each Analysis. 
+
+- The first paragraph should provide a clear **restatement** of your research question, followed by a clear **response** to that question, motivated by your results. Remember that a research question will end with a question mark, and will be something you will be able to answer (or at least respond to effectively) after your analysis is complete. You should also reflect on your pre-existing belief about what would happen, (as discussed in Section 12) in light of the data.
+- The second paragraph should summarize the key limitations of your Analysis, and opportunities for useful next steps associated with that Analysis. To be clear, just writing "get more data," though generally good advice, isn't a sufficient next step. Also, note that it’s not a good idea to suggest limitations that you could fix with the tools you have - instead, apply those tools and build a better Analysis.
+
+# Analysis 1: (Bayesian) Linear Regression Model
+
+## Advice on Variables
+
+In this section you will build a Bayesian linear regression model (with `stan_glm()` from the `rstanarm` package and the default choices of weakly informative priors) to predict your Analysis 1 outcome using your Analysis 1 predictor. 
+
+To start, you will identify those variables, and restrict your data set for Analysis 1 to the complete cases on those variables.
+
+- Use complete English sentences to identify your outcome and your predictor, describing what each variable means and its units of measurement.
+- Also specify how many counties have complete data on both variables.
+- Finally, specify the values of your outcome and predictor for Cuyahoga County, in Ohio, where CWRU's campus is located.
+
+## Advice on Summaries
+
+Provide a detailed set of numerical summaries for each variable at the start of this section. The `lovedist()` function is our preference here.
+
+You will need to build a visualization of the relationship between the outcome (Y-axis) and the predictor (X-axis) and a written description of what you learn about the association (which should include comments about its direction, shape and strength along with identification of any substantial outliers). 
+
+You will need to address the possibility of a transformation here:
+
+- A specification of any transformations you choose to apply to the X or Y variable in order to obtain a better fit with a simple linear regression, along with some justification for the choice (or for the decision not to apply a transformation.)
+    - For this part of Project A, confine your search to either a **logarithm**, an **inverse**, or a **square** as applied to the outcome. If you want to consider one of those transformations for the predictor as well, that's OK but not crucial. 
+    - You should select the most promising transformation on the basis of a scatterplot (perhaps with a loess smooth and linear fit) after the transformation has been applied. You are permitted but not required to use the Box-Cox approach to help here. 
+
+If you decide to use a transformation with either the outcome or predictor before fitting your final model, you should display two plots: one with and one without that transformation. Your plot (including the transformation, if you use one) should include both a loess smooth and the regression line from an ordinary least squares linear model.
+
+## Advice on Approach
+
+Fit your model (with `stan_glm()` from the `rstanarm` package and the default choices of weakly informative priors, being sure to set a seed before running `stan_glm()`) to use your predictor to predict your outcome (applying your selected transformation) and provide the code you used, and the following summary elements in this section.
+
+:::{.callout-note}
+
+In this section, you'll definitely need to show results from the following functions:
+
+- `set.seed()` to set a seed for modeling
+- `stan_glm()` to fit the model, being sure to include `refresh = 0` in your call to the `stan_glm()` function to avoid printing a lot of unnecessary output
+- `model_parameters()` to describe the estimates, being sure to use a 90% level for your uncertainty intervals
+- `model_performance()` to obtain some key indices of the model's fit to the data
+- `check_model()` to display a series of diagnostic plots for the model's fit.
+
+Remember to include 
+
+```
+#| fig-height: 9
+```
+
+at the start of the R code chunk where you run `check_model()` in order to give the plots some vertical space to breathe.
+
+You may also want to run `check_normality()` and `check_heteroskedasticity()` to supplement what you learn from `check_model()`.
+
+:::
+
+### Summarizing the Model's Fit
+
+Your written summary of the model's fit should include:
+
+1. A written statement of the full prediction equation, with coefficients nicely rounded, and a careful description of what the coefficients mean in context. If you're using a transformation of the outcome or the predictor, be sure this is reflected in your comments here.
+
+2. A tidy summary and interpretation of the model's coefficients, including 90% uncertainty intervals for model estimates.
+
+3. The model's raw (not adjusted) R-squared, residual standard error (sigma), and the number of observations to which the model was fit.
+
+### Checking the Model
+
+At the end of your Approach section for Analysis 1, you'll need to write about your conclusions regarding how well the model checks have gone. 
+
+`check_model()` should produce five plots, including:
+
+- posterior predictive check
+- linearity
+- homogeneity of variance
+- influential observations
+- normality of residuals
+
+which are roughly sorted here from most important to least important.
+
+Interpret each of the plots in a complete English sentence (or two) in terms of what they tell you about how well the assumptions of your model hold in light of your data.
+
+## Advice on Conclusions
+
+For Analysis 1, you'll write two paragraphs.
+
+In the first paragraph, you should provide a clear restatement of your research question, followed by a clear and appropriate response to your research question, motivated by your results. Most of the time, one model won't let you come to a strong conclusion about a question of interest, and it is your job to accurately present what information can be specified as a result of the model, without overstating your conclusions. 
+
+Then, write a paragraph which summarizes the key limitations of your work in Analysis 1. 
+
+- If you see problems with regression assumptions in your model checks, that would be a good thing to talk about here, for instance. 
+- Another issue that is worth discussing is your target population, and what evidence you can describe that might indicate whether your selected states are a representative sample of the US as a whole, or perhaps some particular part of the United States.
+- You should also provide at least one useful "next step" that you could take to improve this analysis (just saying "get more data" isn't a sufficient next step.)
+
+# Analysis 2: Comparing Two Independent Samples
+
+## Advice on Variables
+
+Here, you have identified one quantitative (Analysis 2 outcome) and one categorical variable (Analysis 2 binary predictor.) 
+
+- Use complete English sentences to identify your outcome and your predictor, describing what each variable means and its units of measurement.
+- Also specify how many counties have complete data on both variables.
+- Finally, specify the values of your outcome and predictor for Cuyahoga County, in Ohio, where CWRU's campus is located.
+
+## Advice on Summaries
+
+Here, prepare descriptive summaries of the data across the two predictor groups for your chosen outcome, including, of course, attractive and well-constructed visualizations which can be used for comparisons.
+
+A comparison boxplot with violins and means is an excellent option here for the key visualization. Be sure to label it carefully, and use color and/or fill wisely to create a clear and attractive picture.
+
+Provide a detailed set of numerical summaries for each predictor group, as well. The `lovedist()` function is our preference here.
+
+## Advice on Approach
+
+You’ll analyze the results and build a 90% confidence interval for the difference in group means first using an ordinary least squares model to produce a pooled-t procedure, and then using a bootstrap procedure. 
+
+You'll then select one of these two procedures to provide your final response, and discuss the reasons behind the choice you made. 
+
+Show your work and your reasoning (not just your code), and comment on any analytic decisions you make. Be sure to actively present and justify any assumptions you are making.
+
+## Advice on Conclusions
+
+For Analysis 2, you'll write two paragraphs.
+
+In the first paragraph, you should provide a clear restatement of your research question, followed by a clear and appropriate response to your research question, motivated by your results. Interpret your 90% confidence interval's endpoints and width in context.
+
+Then, write a paragraph which summarizes the key limitations of your work in Analysis 2. 
+
+- If you see problems with the assumptions behind your choice of interval, that would be a good thing to talk about here, for instance. 
+- Another issue that is worth discussing is your target population, and what evidence you can describe that might indicate whether your selected states are a representative sample of the US as a whole, or perhaps some particular part of the United States.
+- You should also provide at least one useful "next step" that you could take to improve this analysis (just saying "get more data" isn't a sufficient next step.)
+
+# Analysis 3: Comparing An Outcome in CHR 2025 to its value in CHR 2019
+
+## Advice on Variables
+
+Here, we have identified two quantitative variables (the same outcome in two different time periods) which are paired (so that they have a natural link between them, and use the same units of measurement.) 
+
+- Your Analysis 3 material should start with specifications of what the outcome you are studying in this analysis actually means, including its units, and how your samples reported in CHR 2019 and CHR 2025 were created.
+
+## Advice on Summaries
+
+Provide numerical summaries and visualizations of interest that are relevant to this analysis, and comment on any issues you observe.
+
+As part of your summary, produce a three-plot figure using `patchwork` including a boxplot (with violin and the mean indicated), a histogram with a Normal curve, and a Normal Q-Q plot of those paired differences. Be sure to specify your bin width in an effective way for the histogram, and please remind us how many "pairs" of values you have to work with in your subtitle.
+
+You will also need to provide some evidence on how well the "pairing" worked in this setting, by estimating and interpreting the Pearson correlation between the CHR 2019 and CHR 2025 values.
+
+## Advice on Approach
+
+You’ll analyze the results and build a 90% confidence interval for the population mean difference with an ordinary least squares model to generate an appropriate t-based procedure, as well as an appropriate bootstrap procedure. 
+
+You’ll then select one of these two procedures to provide your final response, and discuss the reasons behind the choice you made.
+
+Show your work and your reasoning (not just your code), and comment on any analytic decisions you make. Be sure to actively present and justify any assumptions you are making.
+
+## Advice on Conclusions
+
+For Analysis 3, you'll write two paragraphs.
+
+In the first paragraph, you should provide a clear restatement of your research question, followed by a clear and appropriate response to your research question, motivated by your results. Interpret your chosen 90% confidence interval's endpoints and width in context. You should also reflect on your pre-existing belief about what would happen, (as discussed in Section 12) in light of your results.
+
+Then, write a paragraph which summarizes the key limitations of your work in Analysis 3. 
+
+- If you see problems with the assumptions behind your choice of interval, that would be a good thing to talk about here, for instance. 
+- If pairing didn't "help" (in the sense that there was no substantial positive correlation between the CHR 2019 and CHR 2025 reports), that would be worth discussing here.
+- Another issue that is worth discussing is your target population, and what evidence you can describe that might indicate whether your selected states are a representative sample of the US as a whole, or perhaps some particular part of the United States.
+- You should also provide at least one useful "next step" that you could take to improve this analysis (just saying "get more data" isn't a sufficient next step.)
+

@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Thomas E. Love, Ph.D.">
+
+<title>Project A Plan – 431 Project A</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7d936024ffa7284ad28c4a5cbc1ff5ea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">431 Project A</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./data.html"> 
+<span class="menu-text">Data</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./plan.html" aria-current="page"> 
+<span class="menu-text">Plan</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./analyses.html"> 
+<span class="menu-text">Analyses</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./portfolio.html"> 
+<span class="menu-text">Portfolio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./examples.html"> 
+<span class="menu-text">Examples</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://thomaselove.github.io/431-2025/contact.html"> 
+<span class="menu-text">Contact Us</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://thomaselove.github.io/431-2025"> 
+<span class="menu-text">431 Homepage</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-deliverables" id="toc-the-deliverables" class="nav-link active" data-scroll-target="#the-deliverables"><span class="header-section-number">1</span> The Deliverables</a></li>
+  <li><a href="#use-the-template-and-sample-plan" id="toc-use-the-template-and-sample-plan" class="nav-link" data-scroll-target="#use-the-template-and-sample-plan"><span class="header-section-number">2</span> Use the Template and Sample Plan</a></li>
+  <li><a href="#project-a-plan-title" id="toc-project-a-plan-title" class="nav-link" data-scroll-target="#project-a-plan-title"><span class="header-section-number">3</span> Project A Plan: Title</a></li>
+  <li><a href="#plan-authors" id="toc-plan-authors" class="nav-link" data-scroll-target="#plan-authors"><span class="header-section-number">4</span> Plan Author(s)</a></li>
+  <li><a href="#sections-of-the-project-a-plan" id="toc-sections-of-the-project-a-plan" class="nav-link" data-scroll-target="#sections-of-the-project-a-plan"><span class="header-section-number">5</span> Sections of the Project A Plan</a>
+  <ul class="collapse">
+  <li><a href="#section-1.-r-packages" id="toc-section-1.-r-packages" class="nav-link" data-scroll-target="#section-1.-r-packages"><span class="header-section-number">5.1</span> Section 1. R Packages</a></li>
+  <li><a href="#section-2.-data-ingest" id="toc-section-2.-data-ingest" class="nav-link" data-scroll-target="#section-2.-data-ingest"><span class="header-section-number">5.2</span> Section 2. Data Ingest</a></li>
+  <li><a href="#section-3.-state-selection" id="toc-section-3.-state-selection" class="nav-link" data-scroll-target="#section-3.-state-selection"><span class="header-section-number">5.3</span> Section 3. State Selection</a></li>
+  <li><a href="#section-4.-variable-selection" id="toc-section-4.-variable-selection" class="nav-link" data-scroll-target="#section-4.-variable-selection"><span class="header-section-number">5.4</span> Section 4. Variable Selection</a></li>
+  <li><a href="#section-5.-variable-cleaning-and-renaming" id="toc-section-5.-variable-cleaning-and-renaming" class="nav-link" data-scroll-target="#section-5.-variable-cleaning-and-renaming"><span class="header-section-number">5.5</span> Section 5. Variable Cleaning and Renaming</a></li>
+  <li><a href="#section-6.-creating-the-analysis-2-predictor" id="toc-section-6.-creating-the-analysis-2-predictor" class="nav-link" data-scroll-target="#section-6.-creating-the-analysis-2-predictor"><span class="header-section-number">5.6</span> Section 6. Creating the Analysis 2 Predictor</a></li>
+  <li><a href="#section-7.-adding-data-from-chr-2019-for-the-analysis-3-outcome" id="toc-section-7.-adding-data-from-chr-2019-for-the-analysis-3-outcome" class="nav-link" data-scroll-target="#section-7.-adding-data-from-chr-2019-for-the-analysis-3-outcome"><span class="header-section-number">5.7</span> Section 7. Adding Data from CHR 2019 for the Analysis 3 Outcome</a></li>
+  <li><a href="#section-8.-arranging-and-saving-the-analytic-tibble" id="toc-section-8.-arranging-and-saving-the-analytic-tibble" class="nav-link" data-scroll-target="#section-8.-arranging-and-saving-the-analytic-tibble"><span class="header-section-number">5.8</span> Section 8. Arranging and Saving The Analytic Tibble</a></li>
+  <li><a href="#section-9.-print-the-tibble" id="toc-section-9.-print-the-tibble" class="nav-link" data-scroll-target="#section-9.-print-the-tibble"><span class="header-section-number">5.9</span> Section 9. Print the Tibble</a></li>
+  <li><a href="#section-10.-numerical-summaries" id="toc-section-10.-numerical-summaries" class="nav-link" data-scroll-target="#section-10.-numerical-summaries"><span class="header-section-number">5.10</span> Section 10. Numerical Summaries</a>
+  <ul class="collapse">
+  <li><a href="#section-10.1-table-of-states-by-binary-factor" id="toc-section-10.1-table-of-states-by-binary-factor" class="nav-link" data-scroll-target="#section-10.1-table-of-states-by-binary-factor"><span class="header-section-number">5.10.1</span> Section 10.1 Table of States by Binary Factor</a></li>
+  <li><a href="#section-10.2-describe_distribution-results" id="toc-section-10.2-describe_distribution-results" class="nav-link" data-scroll-target="#section-10.2-describe_distribution-results"><span class="header-section-number">5.10.2</span> Section 10.2 <code>describe_distribution()</code> results</a></li>
+  <li><a href="#section-10.3-data_codebook-results" id="toc-section-10.3-data_codebook-results" class="nav-link" data-scroll-target="#section-10.3-data_codebook-results"><span class="header-section-number">5.10.3</span> Section 10.3 <code>data_codebook()</code> results</a></li>
+  <li><a href="#section-10.4-distinct-values" id="toc-section-10.4-distinct-values" class="nav-link" data-scroll-target="#section-10.4-distinct-values"><span class="header-section-number">5.10.4</span> Section 10.4 Distinct Values</a></li>
+  </ul></li>
+  <li><a href="#section-11.-the-codebook" id="toc-section-11.-the-codebook" class="nav-link" data-scroll-target="#section-11.-the-codebook"><span class="header-section-number">5.11</span> Section 11. The Codebook</a></li>
+  <li><a href="#section-12.-your-research-questions" id="toc-section-12.-your-research-questions" class="nav-link" data-scroll-target="#section-12.-your-research-questions"><span class="header-section-number">5.12</span> Section 12. Your Research Questions</a>
+  <ul class="collapse">
+  <li><a href="#your-research-question-for-analysis-1" id="toc-your-research-question-for-analysis-1" class="nav-link" data-scroll-target="#your-research-question-for-analysis-1"><span class="header-section-number">5.12.1</span> Your Research Question for Analysis 1</a></li>
+  <li><a href="#research-question-for-analysis-2" id="toc-research-question-for-analysis-2" class="nav-link" data-scroll-target="#research-question-for-analysis-2"><span class="header-section-number">5.12.2</span> Research Question for Analysis 2</a></li>
+  <li><a href="#research-question-for-analysis-3" id="toc-research-question-for-analysis-3" class="nav-link" data-scroll-target="#research-question-for-analysis-3"><span class="header-section-number">5.12.3</span> Research Question for Analysis 3</a></li>
+  </ul></li>
+  <li><a href="#section-13.-reflection" id="toc-section-13.-reflection" class="nav-link" data-scroll-target="#section-13.-reflection"><span class="header-section-number">5.13</span> Section 13. Reflection</a></li>
+  <li><a href="#section-14.-ai-usage" id="toc-section-14.-ai-usage" class="nav-link" data-scroll-target="#section-14.-ai-usage"><span class="header-section-number">5.14</span> Section 14. AI Usage</a></li>
+  <li><a href="#section-15.-session-information" id="toc-section-15.-session-information" class="nav-link" data-scroll-target="#section-15.-session-information"><span class="header-section-number">5.15</span> Section 15. Session Information</a></li>
+  </ul></li>
+  <li><a href="#submission-instructions" id="toc-submission-instructions" class="nav-link" data-scroll-target="#submission-instructions"><span class="header-section-number">6</span> Submission Instructions</a></li>
+  <li><a href="#grading-the-project-a-plan" id="toc-grading-the-project-a-plan" class="nav-link" data-scroll-target="#grading-the-project-a-plan"><span class="header-section-number">7</span> Grading The Project A Plan</a>
+  <ul class="collapse">
+  <li><a href="#checklist-review-elements-for-the-project-a-plan" id="toc-checklist-review-elements-for-the-project-a-plan" class="nav-link" data-scroll-target="#checklist-review-elements-for-the-project-a-plan"><span class="header-section-number">7.1</span> Checklist: Review Elements for The Project A Plan</a>
+  <ul class="collapse">
+  <li><a href="#element-a.-the-complete-project-a-plan-is-submitted-on-time." id="toc-element-a.-the-complete-project-a-plan-is-submitted-on-time." class="nav-link" data-scroll-target="#element-a.-the-complete-project-a-plan-is-submitted-on-time."><span class="header-section-number">7.1.1</span> Element A. The complete Project A Plan is submitted on time.</a></li>
+  <li><a href="#element-b.-template-title-authors-and-date-show-we-want-to-see-in-the-html." id="toc-element-b.-template-title-authors-and-date-show-we-want-to-see-in-the-html." class="nav-link" data-scroll-target="#element-b.-template-title-authors-and-date-show-we-want-to-see-in-the-html."><span class="header-section-number">7.1.2</span> Element B. Template, Title, Author(s) and Date show we want to see in the HTML.</a></li>
+  <li><a href="#element-c.-plan-section-1.-r-packages" id="toc-element-c.-plan-section-1.-r-packages" class="nav-link" data-scroll-target="#element-c.-plan-section-1.-r-packages"><span class="header-section-number">7.1.3</span> Element C. (Plan Section 1. R Packages)</a></li>
+  <li><a href="#element-d.-plan-section-2.-data-ingest" id="toc-element-d.-plan-section-2.-data-ingest" class="nav-link" data-scroll-target="#element-d.-plan-section-2.-data-ingest"><span class="header-section-number">7.1.4</span> Element D. (Plan Section 2. Data Ingest)</a></li>
+  <li><a href="#element-e.-plan-section-3-state-selection" id="toc-element-e.-plan-section-3-state-selection" class="nav-link" data-scroll-target="#element-e.-plan-section-3-state-selection"><span class="header-section-number">7.1.5</span> Element E. (Plan Section 3: State Selection)</a></li>
+  <li><a href="#element-f.-plan-section-4-variable-selection" id="toc-element-f.-plan-section-4-variable-selection" class="nav-link" data-scroll-target="#element-f.-plan-section-4-variable-selection"><span class="header-section-number">7.1.6</span> Element F. (Plan Section 4: Variable Selection)</a></li>
+  <li><a href="#element-g.-plan-section-5-variable-cleaning-and-renaming" id="toc-element-g.-plan-section-5-variable-cleaning-and-renaming" class="nav-link" data-scroll-target="#element-g.-plan-section-5-variable-cleaning-and-renaming"><span class="header-section-number">7.1.7</span> Element G. (Plan Section 5: Variable Cleaning and Renaming)</a></li>
+  <li><a href="#element-h.-plan-section-6-creating-the-analysis-2-predictor" id="toc-element-h.-plan-section-6-creating-the-analysis-2-predictor" class="nav-link" data-scroll-target="#element-h.-plan-section-6-creating-the-analysis-2-predictor"><span class="header-section-number">7.1.8</span> Element H. (Plan Section 6: Creating the Analysis 2 Predictor)</a></li>
+  <li><a href="#element-i.-plan-section-7-adding-chr-2019-data-for-the-analysis-3-outcome" id="toc-element-i.-plan-section-7-adding-chr-2019-data-for-the-analysis-3-outcome" class="nav-link" data-scroll-target="#element-i.-plan-section-7-adding-chr-2019-data-for-the-analysis-3-outcome"><span class="header-section-number">7.1.9</span> Element I. (Plan Section 7: Adding CHR 2019 Data for the Analysis 3 Outcome)</a></li>
+  <li><a href="#element-j.-plan-section-8-arranging-and-saving-the-analytic-tibble" id="toc-element-j.-plan-section-8-arranging-and-saving-the-analytic-tibble" class="nav-link" data-scroll-target="#element-j.-plan-section-8-arranging-and-saving-the-analytic-tibble"><span class="header-section-number">7.1.10</span> Element J. (Plan Section 8: Arranging and Saving the Analytic Tibble)</a></li>
+  <li><a href="#element-k.-plan-section-9-print-the-tibble" id="toc-element-k.-plan-section-9-print-the-tibble" class="nav-link" data-scroll-target="#element-k.-plan-section-9-print-the-tibble"><span class="header-section-number">7.1.11</span> Element K. (Plan Section 9: Print the Tibble)</a></li>
+  <li><a href="#element-l.-plan-section-10-numerical-summaries" id="toc-element-l.-plan-section-10-numerical-summaries" class="nav-link" data-scroll-target="#element-l.-plan-section-10-numerical-summaries"><span class="header-section-number">7.1.12</span> Element L. (Plan Section 10: Numerical Summaries)</a></li>
+  <li><a href="#element-m.-plan-section-11-the-codebook" id="toc-element-m.-plan-section-11-the-codebook" class="nav-link" data-scroll-target="#element-m.-plan-section-11-the-codebook"><span class="header-section-number">7.1.13</span> Element M. (Plan Section 11: The Codebook)</a></li>
+  <li><a href="#element-n.-plan-section-12-research-questions" id="toc-element-n.-plan-section-12-research-questions" class="nav-link" data-scroll-target="#element-n.-plan-section-12-research-questions"><span class="header-section-number">7.1.14</span> Element N. (Plan Section 12: Research Questions)</a></li>
+  <li><a href="#element-o.-plan-section-13-plan-reflection" id="toc-element-o.-plan-section-13-plan-reflection" class="nav-link" data-scroll-target="#element-o.-plan-section-13-plan-reflection"><span class="header-section-number">7.1.15</span> Element O. (Plan Section 13: Plan Reflection)</a></li>
+  <li><a href="#element-p.-plan-section-14-ai-usage" id="toc-element-p.-plan-section-14-ai-usage" class="nav-link" data-scroll-target="#element-p.-plan-section-14-ai-usage"><span class="header-section-number">7.1.16</span> Element P. (Plan Section 14: AI Usage)</a></li>
+  <li><a href="#element-q.-plan-section-15-session-information" id="toc-element-q.-plan-section-15-session-information" class="nav-link" data-scroll-target="#element-q.-plan-section-15-session-information"><span class="header-section-number">7.1.17</span> Element Q. (Plan Section 15: Session Information)</a></li>
+  <li><a href="#element-r.-miscellaneous" id="toc-element-r.-miscellaneous" class="nav-link" data-scroll-target="#element-r.-miscellaneous"><span class="header-section-number">7.1.18</span> Element R. (Miscellaneous)</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Project A Plan</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Thomas E. Love, Ph.D. </p>
+          </div>
+  </div>
+    
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">2025-08-08</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="the-deliverables" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> The Deliverables</h1>
+<p>You will develop and send to us (through Canvas):</p>
+<ol type="1">
+<li>the analytic tibble (as an .Rds data file) you developed following the <a href="./data.html">Data page</a> instructions,</li>
+<li>a Quarto (.qmd) file containing your data management work, and the other elements required in the Project A Plan, and</li>
+<li>the HTML result of rendering your Quarto file. The resulting HTML document will have 15 sections, as described below.</li>
+</ol>
+<p>The deadline for the Project A Plan is found on the <a href="https://thomaselove.github.io/431-2025/calendar.html">Course Calendar</a>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Use spell check (hit F7) on your Quarto file before rendering it, and review the HTML result carefully to ensure that no residual warnings or error messages remain in the document.</li>
+<li>When we run the Quarto file, it needs to produce your HTML file without errors. (Note: warnings or messages are OK at this stage, but it has to work.)</li>
+<li>Do not suppress the R code at any point in the document. All R code should be echoed.</li>
+<li>If you are working with a <strong>partner</strong>, exactly one of you should submit the materials to Canvas, and the other partner should submit a text document (Word or PDF is fine) to Canvas that reads: “My name is [YOUR NAME]. I am working on Project A with [INSERT FULL NAME OF YOUR PARTNER], and they will submit the materials for the Plan”</li>
+</ul>
+</div>
+</div>
+<p>To complete the Project A Plan, you will need to have completed all six Data Tasks on our <a href="./data.html">Data page</a> but none of the work described on our <a href="./analyses.html">Analyses page</a>.</p>
+</section>
+<section id="use-the-template-and-sample-plan" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Use the Template and Sample Plan</h1>
+<p>There is a Project A Plan template, and a sample Project A Plan, available to you on the <a href="./examples.html">Examples page</a>. Please use these tools to facilitate your progress, <em>and</em> help us evaluate your work quickly.</p>
+</section>
+<section id="project-a-plan-title" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Project A Plan: Title</h1>
+<p>You need to come up with a meaningful title (containing at most 80 characters) for your work.</p>
+<ol type="1">
+<li>Do not use the terms “Project”, “Plan” or “Project A” or “431” in your title.</li>
+<li>You can use “CHR 2025” as the abbreviation in your title for “County Health Rankings, 2025.”</li>
+<li>Your title should be no longer than 80 characters. You can use a subtitle if you like, but the title must stand on its own.</li>
+<li>It’s fine if your title focuses on just one of your three analyses, rather than all three.</li>
+</ol>
+</section>
+<section id="plan-authors" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Plan Author(s)</h1>
+<p>Your full name, and if you worked with a partner, both full names, are found in the author section of the Quarto (in the YAML) and appear legibly at the start of the HTML document.</p>
+</section>
+<section id="sections-of-the-project-a-plan" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Sections of the Project A Plan</h1>
+<p>The Project A Plan includes sections, as described below.</p>
+<section id="section-1.-r-packages" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="section-1.-r-packages"><span class="header-section-number">5.1</span> Section 1. R Packages</h2>
+<p>All necessary packages (and no unused packages) should be loaded at the start of the work, and all warnings or messages associated with that loading are suppressed in the HTML result.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It seems impossible to do this work without the <code>janitor</code>, <code>naniar</code>, <code>xfun</code>, <code>easystats</code> and <code>tidyverse</code> packages. Remember to load <code>easystats</code> and the <code>tidyverse</code> last.</p>
+<p>The use of other packages is up to you, and you may want to source in the <code>Love-431.R</code> script, too.</p>
+</div>
+</div>
+</section>
+<section id="section-2.-data-ingest" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="section-2.-data-ingest"><span class="header-section-number">5.2</span> Section 2. Data Ingest</h2>
+<p>This section should display the results of following the instructions in Data Task 1 from the <a href="./data.html">Data page</a>. In this section, you should ingest the raw data into <code>chr_2025_raw</code>, selecting the main variables under consideration and then filter to the ranked counties, producing a tibble with 3088 rows and 90 columns. Do not list the tibble, but use R code to demonstrate that your work meets this requirement.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We will want to check that the project ingests the data properly. This means that you have eliminated the correct row (in any way that works) as you import the data, and that you have used <code>read_csv()</code> to read in the data, thus creating a tibble.</p>
+</div>
+</div>
+</section>
+<section id="section-3.-state-selection" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="section-3.-state-selection"><span class="header-section-number">5.3</span> Section 3. State Selection</h2>
+<p>This section follows the instructions for <a href="./data.html">Data Task 2</a>. Here, you will identify your six states by postal abbreviation code and name, and write a sentence or two describing your motivation for these selections. You will also demonstrate that your selection yields a new tibble with 300-800 counties, all of which are ranked, and that you have converted the <code>state</code> variable of postal abbreviation codes to a factor.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Which states were chosen needs to be clear, and we’ll want to read a sentence about why you chose the states you did.</li>
+<li>This must lead to 300-800 counties, and this number (total number of counties) must be clear from the document (both the number of rows in the final tibble and in writing.)</li>
+<li>Do not drop any counties from any of the states you selected in the development of your tibble.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="section-4.-variable-selection" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="section-4.-variable-selection"><span class="header-section-number">5.4</span> Section 4. Variable Selection</h2>
+<p>This section follows the instructions for <a href="./data.html">Data Task 3</a>. Here, you will provide code to identify and select a total of nine variables, including the four required and your five selected variables.</p>
+</section>
+<section id="section-5.-variable-cleaning-and-renaming" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="section-5.-variable-cleaning-and-renaming"><span class="header-section-number">5.5</span> Section 5. Variable Cleaning and Renaming</h2>
+<p>For each of your selected variables, you will use the instructions in <a href="./data.html">Data Task 3</a> to complete appropriate cleaning of the variable, and replace the initial version with your cleaned alternative, renaming each selected variable as you go.</p>
+</section>
+<section id="section-6.-creating-the-analysis-2-predictor" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="section-6.-creating-the-analysis-2-predictor"><span class="header-section-number">5.6</span> Section 6. Creating the Analysis 2 Predictor</h2>
+<p>Use the instructions in <a href="./data.html">Data Task 4</a> to develop the binary factor that you will use as your Analysis 2 predictor. Be sure to describe the exact cutpoints used in creating the low and high groups, and demonstrate that the resulting factor has approximately 40% of your original observations in the low group, 40% in the high group, and missing data for the middle 20%.</p>
+</section>
+<section id="section-7.-adding-data-from-chr-2019-for-the-analysis-3-outcome" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="section-7.-adding-data-from-chr-2019-for-the-analysis-3-outcome"><span class="header-section-number">5.7</span> Section 7. Adding Data from CHR 2019 for the Analysis 3 Outcome</h2>
+<p>Use the instructions in <a href="./data.html">Data Task 5</a> to include the CHR 2019 version of your Analysis 3 outcome as a variable in your tibble. This should give you a total of 11 variables.</p>
+</section>
+<section id="section-8.-arranging-and-saving-the-analytic-tibble" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="section-8.-arranging-and-saving-the-analytic-tibble"><span class="header-section-number">5.8</span> Section 8. Arranging and Saving The Analytic Tibble</h2>
+<p>After renaming your variables, arrange the 11 variables in your <strong>chr_2025</strong> tibble into the order specified in <a href="./data.html">Data Task 6</a>.</p>
+<p>Then save the tibble as an R data set. Don’t make any changes to the tibble after this point.</p>
+</section>
+<section id="section-9.-print-the-tibble" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="section-9.-print-the-tibble"><span class="header-section-number">5.9</span> Section 9. Print the Tibble</h2>
+<p>You will show that your <strong>chr_2025</strong> tibble is in fact a tibble and not just a data frame by listing it, so that we can see that only the first 10 rows are printed, and the columns are appropriately labeled. The command you want is just:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>chr_2025</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="section-10.-numerical-summaries" class="level2" data-number="5.10">
+<h2 data-number="5.10" class="anchored" data-anchor-id="section-10.-numerical-summaries"><span class="header-section-number">5.10</span> Section 10. Numerical Summaries</h2>
+<p>You will do four things here.</p>
+<section id="section-10.1-table-of-states-by-binary-factor" class="level3" data-number="5.10.1">
+<h3 data-number="5.10.1" class="anchored" data-anchor-id="section-10.1-table-of-states-by-binary-factor"><span class="header-section-number">5.10.1</span> Section 10.1 Table of States by Binary Factor</h3>
+<p>First, use the <code>tabyl()</code> function from the <code>janitor</code> package to produce a two-way table of <code>state</code> (in the rows) classified against the factor variable (with levels Low and High, plus some missing values, in the columns) that you created in Data Task 4 from the <a href="./data.html">Data page</a>.</p>
+<ul>
+<li>Be sure to include both row and column marginal totals in your <code>tabyl()</code> result here.</li>
+<li>We should see some missing values in the columns.</li>
+</ul>
+</section>
+<section id="section-10.2-describe_distribution-results" class="level3" data-number="5.10.2">
+<h3 data-number="5.10.2" class="anchored" data-anchor-id="section-10.2-describe_distribution-results"><span class="header-section-number">5.10.2</span> Section 10.2 <code>describe_distribution()</code> results</h3>
+<p>Next, display the results of <code>describe_distribution()</code> from the <code>datawizard</code> package (from the <code>easystats</code> meta-package), run on the entire tibble.</p>
+<ul>
+<li>For all variables except the two factors, this will allow us to see (among other things) that the minimum and maximum values that make sense, and also that each of your variables shows the appropriate number of counties.</li>
+</ul>
+</section>
+<section id="section-10.3-data_codebook-results" class="level3" data-number="5.10.3">
+<h3 data-number="5.10.3" class="anchored" data-anchor-id="section-10.3-data_codebook-results"><span class="header-section-number">5.10.3</span> Section 10.3 <code>data_codebook()</code> results</h3>
+<p>Next, run the <code>data_codebook()</code> function from the <code>datawizard</code> package from <code>easystats</code> on your tibble, with two specific settings (max_values = 6 and range_at = 15), as shown below.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data_codebook</span>(chr_2025, <span class="at">max_values =</span> <span class="dv">6</span>, <span class="at">range_at =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Look over these results to be sure that:</p>
+<ul>
+<li>all of your planned outcome and quantitative predictor variables show a minimum and maximum value,</li>
+<li>you have no more than 20% missing values in either of your Analysis 1 variables, your Analysis 2 outcome and also your Analysis 3 outcome (in each year)</li>
+<li>and that your data are missing only where they are supposed to be missing.
+<ul>
+<li>Specifically, you have no missing data at all in your identifying variables (<code>fipscode</code>, <code>state</code>, <code>county</code>) nor in your <code>county_clustered</code> variable.</li>
+<li>Your binary factor should definitely have about 20% missing values, of course, since that’s how you created it.</li>
+</ul></li>
+</ul>
+<p>Include a sentence verifying that all of these checks are true.</p>
+</section>
+<section id="section-10.4-distinct-values" class="level3" data-number="5.10.4">
+<h3 data-number="5.10.4" class="anchored" data-anchor-id="section-10.4-distinct-values"><span class="header-section-number">5.10.4</span> Section 10.4 Distinct Values</h3>
+<p>Fourth and finally, provide counts of distinct values for each of your variables. The following code should be helpful:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>chr_2025 <span class="sc">|&gt;</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), <span class="sc">~</span> <span class="fu">n_distinct</span>(.))) <span class="sc">|&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Be sure to check this output to see that:</p>
+<ul>
+<li>you have a distinct <code>fipscode</code> for every row in your tibble, and</li>
+<li>you have at least 15 unique values for each outcome and for the quantitative predictors in your analyses,</li>
+<li>we can see all of the results in your HTML output.</li>
+</ul>
+<p>Include a sentence verifying that these checks are true.</p>
+</section>
+</section>
+<section id="section-11.-the-codebook" class="level2" data-number="5.11">
+<h2 data-number="5.11" class="anchored" data-anchor-id="section-11.-the-codebook"><span class="header-section-number">5.11</span> Section 11. The Codebook</h2>
+<p>There are two steps to complete the codebook section.</p>
+<p>First, write a sentence stating the number of counties (should be 300-800) and variables (should be eleven) in your tibble. Then use the <code>dim()</code> function to show us that your sentence is correct.</p>
+<p>Second, create a variable description table which contains, for each of the 11 variables in your data set:</p>
+<ul>
+<li>the variable’s name in your tibble,</li>
+<li>its role in your planned analyses, where:
+<ul>
+<li>A1-out = Analysis 1 outcome</li>
+<li>A1-pre = Analysis 1 predictor</li>
+<li>and so on, leaving the variables not used in Analyses 1-3 with blank roles,</li>
+</ul></li>
+<li>the original <code>vXXX</code> code (leave off the <code>_rawvalue</code>, so it might be <code>v009</code>, for example) for this variable in the CHR 2025 data,</li>
+<li>the definition of the variable (from CHR) including its units,
+<ul>
+<li>for your binary variable, a clear indication of the cutpoints you used should be provided (what does Low mean and what does High mean?)</li>
+</ul></li>
+<li>the year(s) in which the variable was measured (from CHR)</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use the <a href="https://www.countyhealthrankings.org/health-data/county-health-rankings-measures">County Health Rankings website’s 2025 Measures list</a>, and in particular the linked information on that page for full descriptions, definitions, years and limitations of the variables you have selected.</p>
+<ul>
+<li>With regard to the data for Analysis 3 that you obtained from CHR 2019, I provided the relevant information at the end of the instructions for <a href="./data.html#sources-and-years-for-2019-chr-variables">Data Task 5</a>.</li>
+</ul>
+</div>
+</div>
+<p>Here is a sample variable description table with just some of the variables - yours will have to include all 11, of course…</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 12%">
+<col style="width: 21%">
+<col style="width: 27%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Variable</th>
+<th style="text-align: center;">Role</th>
+<th style="text-align: center;">Old Name</th>
+<th style="text-align: center;">Description</th>
+<th style="text-align: center;">Year(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>fipscode</strong></td>
+<td style="text-align: center;">ID</td>
+<td style="text-align: center;"><code>fipscode</code></td>
+<td style="text-align: center;">FIPS code</td>
+<td style="text-align: center;">–</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>state</strong></td>
+<td style="text-align: center;">ID</td>
+<td style="text-align: center;"><code>state</code></td>
+<td style="text-align: center;">State Abbreviation (list your states here)</td>
+<td style="text-align: center;">–</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>county</strong></td>
+<td style="text-align: center;">ID</td>
+<td style="text-align: center;"><code>county</code></td>
+<td style="text-align: center;">County Name</td>
+<td style="text-align: center;">–</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>poor_fair_health</strong></td>
+<td style="text-align: center;">A1-out</td>
+<td style="text-align: center;"><code>v002</code></td>
+<td style="text-align: center;">Percentage of adults reporting fair or poor health (age-adjusted).</td>
+<td style="text-align: center;">2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>adult_obesity</strong></td>
+<td style="text-align: center;">A1-pre</td>
+<td style="text-align: center;"><code>v011</code></td>
+<td style="text-align: center;">Percentage of the adult population (age 18 and older) that reports a body mass index (BMI) greater than or equal to 30 kg/m2 (age-adjusted).</td>
+<td style="text-align: center;">2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>adult_smoking</strong></td>
+<td style="text-align: center;">A2-out</td>
+<td style="text-align: center;"><code>v009</code></td>
+<td style="text-align: center;">Percentage of adults who are current smokers (age-adjusted).</td>
+<td style="text-align: center;">2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>income_ineq_cat</strong></td>
+<td style="text-align: center;">A2-pre</td>
+<td style="text-align: center;">from <code>v044</code></td>
+<td style="text-align: center;">Low: <span class="math inline">\(\leq\)</span> 4.25, High: <span class="math inline">\(\geq\)</span> 4.60.</td>
+<td style="text-align: center;">2019-23</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>income_inequality</strong></td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;"><code>v044</code></td>
+<td style="text-align: center;">Ratio of household income at the 80th percentile to income at the 20th percentile.</td>
+<td style="text-align: center;">2019-23</td>
+</tr>
+</tbody>
+</table>
+<p>and so on.</p>
+</section>
+<section id="section-12.-your-research-questions" class="level2" data-number="5.12">
+<h2 data-number="5.12" class="anchored" data-anchor-id="section-12.-your-research-questions"><span class="header-section-number">5.12</span> Section 12. Your Research Questions</h2>
+<p>In this section, you will provide three research questions, one each for Analysis 1, Analysis 2, and Analysis 3. It would help to provide one subsections for each Analysis within this section, so that Section 12.1 is Analysis 1, Section 12.2 is Analysis 2, and Section 12.3 is Analysis 3.</p>
+<p>For each analysis …</p>
+<ol type="1">
+<li>Start by describing what you want to study, and then specify a research question (which should end with a question mark and be something you can resolve with the planned analysis.)</li>
+<li>Don’t boil the ocean here. You’re looking for a research question that can be reasonably addressed using your data, so it has to be pretty straightforward.</li>
+<li>If you have a pre-existing belief about what will happen, before you look at the data, please feel encouraged to include a statement about that belief before specifying your question.</li>
+</ol>
+<section id="your-research-question-for-analysis-1" class="level3" data-number="5.12.1">
+<h3 data-number="5.12.1" class="anchored" data-anchor-id="your-research-question-for-analysis-1"><span class="header-section-number">5.12.1</span> Your Research Question for Analysis 1</h3>
+<p>Here you will propose your Research Question for Analysis 1 and provide some motivation for your variable choices associated with that analysis. A trio of well-developed research questions in this section is the <strong>most important part</strong> of this portfolio.</p>
+<ul>
+<li>A research question will <strong>end with a question mark</strong>, and will be something you will be able to answer (or at least respond to effectively) after your Analysis 1 is complete.</li>
+<li>Use one research question for Analysis 1, another for Analysis 2, and a third for Analysis 3.</li>
+</ul>
+<p>After listing your question, you should <strong>provide some brief speculation</strong> as to the nature of the relationship you anticipate finding based on your hypotheses about the variables you plan to study (following my tips below.)</p>
+<section id="tips-for-the-research-question-in-analysis-1" class="level4" data-number="5.12.1.1">
+<h4 data-number="5.12.1.1" class="anchored" data-anchor-id="tips-for-the-research-question-in-analysis-1"><span class="header-section-number">5.12.1.1</span> Tips for the research question in Analysis 1</h4>
+<ul>
+<li>Examples of dull but moderately effective and minimally appropriate research questions for Analysis 1 would be:</li>
+</ul>
+<p><strong>How well does a linear model using [predictor] predict [outcome], in [number] counties in the states of [list of your states]?</strong></p>
+<p>or</p>
+<p><strong>What is the nature of the association between [predictor] and [outcome], in [number] counties in the states of [list of your states]?</strong></p>
+<ul>
+<li>You should be able to do better than that, especially if you have a reason to believe something in advance about the direction or strength of the association you are anticipating.</li>
+<li>However, if you’re struggling, using that format will be OK.</li>
+<li>A research question uses formal but clear language.</li>
+<li>Given your planned analyses, stay away from statements about cause and effect, and don’t use the words correlate or regression (in any form) in your research question.</li>
+</ul>
+</section>
+</section>
+<section id="research-question-for-analysis-2" class="level3" data-number="5.12.2">
+<h3 data-number="5.12.2" class="anchored" data-anchor-id="research-question-for-analysis-2"><span class="header-section-number">5.12.2</span> Research Question for Analysis 2</h3>
+<p>Here you will propose your Research Question for Analysis 2 and provide some motivation for your variable choices associated with that analysis. All of the tips for Analysis 1 apply in this case, too.</p>
+<ul>
+<li>Please remember that a research question for this course should end in a question mark.</li>
+<li>Again, after listing your question, it is completely appropriate for you to provide some brief speculation as to the nature of the relationship you anticipate finding based on your hypotheses about the variables you plan to study.</li>
+<li>An example of a dull but moderately effective and minimally appropriate research question for Analysis 2 might be:</li>
+</ul>
+<p><strong>Are there meaningful differences in the mean of [outcome] for counties with high and low levels of [predictor]?</strong></p>
+<p>Again, you should be able to do a bit better than that.</p>
+</section>
+<section id="research-question-for-analysis-3" class="level3" data-number="5.12.3">
+<h3 data-number="5.12.3" class="anchored" data-anchor-id="research-question-for-analysis-3"><span class="header-section-number">5.12.3</span> Research Question for Analysis 3</h3>
+<p>Here you will propose your Research Question for Analysis 3, and provide some motivation for your variable choices associated with that analysis. All of the tips for Analysis 1 apply in this case, too.</p>
+<ul>
+<li>Please remember that a research question for this course should end in a question mark.</li>
+<li>Again, after listing your question, it is completely appropriate for you to provide some brief speculation as to the nature of the relationship you anticipate finding based on your hypotheses about the variables you plan to study.</li>
+<li>An example of a dull but moderately effective and minimally appropriate research question for Analysis 3 might be:</li>
+</ul>
+<p><strong>Are there meaningful differences in the mean of [outcome] for counties in 2025 as compared to 2019?</strong></p>
+<p>Again, you should be able to do a bit better than that.</p>
+</section>
+</section>
+<section id="section-13.-reflection" class="level2" data-number="5.13">
+<h2 data-number="5.13" class="anchored" data-anchor-id="section-13.-reflection"><span class="header-section-number">5.13</span> Section 13. Reflection</h2>
+<p>Here you will provide a paragraph describing the most challenging (or difficult) part of completing the work so far, and how you were able to overcome whatever it was that was most challenging.</p>
+<p>Your discussion of the biggest challenge includes a paragraph (or more) written in English, with attention paid to grammar, syntax and spelling. It needs to be clear to us from reading your reflection what your biggest issue was, and how you tried to address it.</p>
+<p>Please be specific - a time management issue, for example, could be attributed to a lot of different things. Take the time to describe what happened and how you got past it in some detail.</p>
+</section>
+<section id="section-14.-ai-usage" class="level2" data-number="5.14">
+<h2 data-number="5.14" class="anchored" data-anchor-id="section-14.-ai-usage"><span class="header-section-number">5.14</span> Section 14. AI Usage</h2>
+<p>All students should have an AI Usage section.</p>
+<ul>
+<li>If you decide to get help from a large language model (like ChatGPT) to help with your phrasing of ideas, or building code, OK, but you need to describe what you did in some detail here. Use multiple clear and complete sentences.</li>
+<li>If you use nothing outside of the spell-checker and code completion tools within RStudio, please write that here, as follows:</li>
+</ul>
+<p>In preparing this response, I made no use of AI outside of spell-check and code completion within RStudio.</p>
+</section>
+<section id="section-15.-session-information" class="level2" data-number="5.15">
+<h2 data-number="5.15" class="anchored" data-anchor-id="section-15.-session-information"><span class="header-section-number">5.15</span> Section 15. Session Information</h2>
+<p>As we have required in our Labs, there must be a Session Information section at the end of the document. This should indicate that a current version of R and R packages is used.</p>
+<p>We’d like you to use the <code>xfun</code> package’s version of <code>session_info()</code>, as we’ve done in the labs.</p>
+</section>
+</section>
+<section id="submission-instructions" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Submission Instructions</h1>
+<ul>
+<li>Be sure to use spell check (just hit F7) on your Quarto file before rendering it, and review the HTML result carefully to ensure that no residual warnings or error messages remain in the document.</li>
+<li>Be sure that your Plan includes your name (names if you are working with a partner) as the author in Quarto, and thus in HTML, as well as a proper title.</li>
+</ul>
+<p>Your Plan (including your R data set, Quarto and HTML files) should then be submitted to Canvas by the deadline listed in the <a href="https://thomaselove.github.io/431-2025/calendar.html">Course Calendar</a>.</p>
+</section>
+<section id="grading-the-project-a-plan" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Grading The Project A Plan</h1>
+<p>Dr.&nbsp;Love and the TAs will review your Project A Plan and either ACCEPT it or ask for a REDO.</p>
+<ul>
+<li>ACCEPT means you’re done, and should move on the rest of Project A, perhaps while making some small changes that we request of you in your submission on Canvas.
+<ul>
+<li>To receive an ACCEPT, you must meet the specifications above, and also you must have no more than two spelling, typographical or grammatical errors in the document as a whole that we catch.</li>
+<li>See below for a list of things we checked in the 2024 Plans.</li>
+</ul></li>
+<li>REDO means you’ll need to fix the problems we’ve identified (plus make sure you’ve done all of the things in these instructions) and resubmit by the deadline we give you, which will require a rapid turnaround.
+<ul>
+<li>If your Plan is accepted on the initial submission and was on time, you’ll receive 20 points.</li>
+<li>If your Plan is accepted on the first REDO (submission 2), you’ll receive 18 points out of a possible 20.</li>
+<li>If your Plan is accepted on the second or third REDO (submissions 3 or 4) or later, you’ll receive 16 points out of a possible 20.</li>
+<li>We hope we won’t have to go further than 2 revisions for anyone.</li>
+</ul></li>
+</ul>
+<p>If you don’t have some feature that we “prefer” but doesn’t alone require a REDO, we may mention this in our ACCEPT feedback and ask you to fix it in your Project A Portfolio.</p>
+<section id="checklist-review-elements-for-the-project-a-plan" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="checklist-review-elements-for-the-project-a-plan"><span class="header-section-number">7.1</span> Checklist: Review Elements for The Project A Plan</h2>
+<p>In 2024, what did we look for in order to ACCEPT the Project A Plan, rather than require a REDO? The list of elements follows. We will probably look at most of these things again in 2025.</p>
+<section id="element-a.-the-complete-project-a-plan-is-submitted-on-time." class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="element-a.-the-complete-project-a-plan-is-submitted-on-time."><span class="header-section-number">7.1.1</span> Element A. The complete Project A Plan is submitted on time.</h3>
+<ol type="1">
+<li>If it’s 1-24 hours late, it will be reviewed later than those received on time, and penalized for lateness.</li>
+<li>If you worked with a partner, both names are shown as authors in the HTML. Exactly one of you has submitted the materials to Canvas, while the other partner has submitted a text document (Word or PDF is fine) to Canvas that reads: “My name is [YOUR NAME]. I am working on Project A with [INSERT FULL NAME OF YOUR PARTNER], and they will submit the materials for the Plan.”</li>
+<li>The R data set (analytic tibble), Quarto (.qmd) file, and HTML result are all present in the submission to Canvas.</li>
+<li>The Quarto file produces the HTML file without errors when we run it. (Note: warnings or messages are OK, but it has to work.)</li>
+</ol>
+</section>
+<section id="element-b.-template-title-authors-and-date-show-we-want-to-see-in-the-html." class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="element-b.-template-title-authors-and-date-show-we-want-to-see-in-the-html."><span class="header-section-number">7.1.2</span> Element B. Template, Title, Author(s) and Date show we want to see in the HTML.</h3>
+<ol type="1">
+<li>There is a real title that does not include “Project”, “Plan”, “Project A” or “431” in it, but is correctly spelled, and fits in the available space in the HTML.</li>
+<li>The title is no more than 80 characters in length, excluding any subtitles.</li>
+<li>The title (without the subtitle) describes the work effectively on its own.</li>
+<li>The author(s) name(s) appears in the HTML correctly.</li>
+<li>The date is properly formatted (as, for instance, 2024-09-30) under the word PUBLISHED or MODIFIED in the HTML.</li>
+<li>There is a table of contents which appears in the HTML and has exactly 14 sections, whose names match those used in the Project A Plan Template.</li>
+<li>When we click on the table of contents in the HTML to visit the session information (Section 14), it works.</li>
+</ol>
+</section>
+<section id="element-c.-plan-section-1.-r-packages" class="level3" data-number="7.1.3">
+<h3 data-number="7.1.3" class="anchored" data-anchor-id="element-c.-plan-section-1.-r-packages"><span class="header-section-number">7.1.3</span> Element C. (Plan Section 1. R Packages)</h3>
+<ol type="1">
+<li>The janitor, naniar, easystats and tidyverse packages and perhaps other packages are loaded with <code>library()</code> as part of section 1, with the tidyverse loaded last.</li>
+<li>No packages in the core tidyverse (all of which load with library(tidyverse)) are loaded separately. The core tidyverse packages are dplyr, ggplot2, tidyr, readr, purrr, tibble, stringr and forcats.</li>
+<li>No package is loaded more than once.</li>
+<li><code>#| message: false</code> is used in the code chunk for Section 1 so that all messages associated with package loading are silenced.</li>
+</ol>
+</section>
+<section id="element-d.-plan-section-2.-data-ingest" class="level3" data-number="7.1.4">
+<h3 data-number="7.1.4" class="anchored" data-anchor-id="element-d.-plan-section-2.-data-ingest"><span class="header-section-number">7.1.4</span> Element D. (Plan Section 2. Data Ingest)</h3>
+<ol type="1">
+<li>The data should be ingested into <code>chr_2025_raw</code> using <code>read_csv()</code> and thus creating a tibble, while eliminating the correct row, as described in <a href="https://thomaselove.github.io/431-projectA-2025/data.html#data-task-1.-ingest-the-raw-data">Data Task 1 from the Data page</a>.</li>
+<li>The <code>chr_2025_raw</code> tibble is then filtered to the ranked counties properly, and the resulting tibble should display 3088 rows and 90 columns (we suggest using the dim() function to verify that this is true.)</li>
+</ol>
+</section>
+<section id="element-e.-plan-section-3-state-selection" class="level3" data-number="7.1.5">
+<h3 data-number="7.1.5" class="anchored" data-anchor-id="element-e.-plan-section-3-state-selection"><span class="header-section-number">7.1.5</span> Element E. (Plan Section 3: State Selection)</h3>
+<ol type="1">
+<li>The six states selected are clearly indicated by postal abbreviation code and name, following the instructions in <a href="https://thomaselove.github.io/431-projectA-2025/data.html#data-task-2.-select-six-states">Data Task 2</a>.</li>
+<li>There is a clear English sentence (or two) describing why you selected the states you selected.</li>
+<li>You then filter the tibble to include only the ranked counties from your six states, and you demonstrate that this leads to a total number of counties between 300 and 800. (This should be demonstrated in code, and with a sentence.)</li>
+<li>No counties are dropped from the states you selected.</li>
+</ol>
+</section>
+<section id="element-f.-plan-section-4-variable-selection" class="level3" data-number="7.1.6">
+<h3 data-number="7.1.6" class="anchored" data-anchor-id="element-f.-plan-section-4-variable-selection"><span class="header-section-number">7.1.6</span> Element F. (Plan Section 4: Variable Selection)</h3>
+<ol type="1">
+<li>You have followed the instructions in <a href="https://thomaselove.github.io/431-projectA-2025/data.html#data-task-3.-select-analytic-variables">Data Task 3</a> to develop code that identifies and selects nine variables, including the four that are required (fipscode, county, state and county_clustered), and five more (each of which are different) that you have selected.</li>
+<li>All five of your selected variables are permitted for the use you’re making of them, as specified in <a href="https://thomaselove.github.io/431-projectA-2025/data.html#table-b.-variables-you-can-select">Data Task 3 Table B</a>.</li>
+</ol>
+</section>
+<section id="element-g.-plan-section-5-variable-cleaning-and-renaming" class="level3" data-number="7.1.7">
+<h3 data-number="7.1.7" class="anchored" data-anchor-id="element-g.-plan-section-5-variable-cleaning-and-renaming"><span class="header-section-number">7.1.7</span> Element G. (Plan Section 5: Variable Cleaning and Renaming)</h3>
+<ol type="1">
+<li>You have followed the instructions in <a href="https://thomaselove.github.io/431-projectA-2025/data.html#clean-and-rename-your-selected-variables">Data Task 3</a> to complete appropriate cleaning of each variable that needs it, and replacement of the initial versions of these variables with your cleaned alternative.</li>
+<li>You have clearly indicated in Section 5 what role each outcome will play, and its initial name (from CHR 2025) along with its new name and description.</li>
+</ol>
+</section>
+<section id="element-h.-plan-section-6-creating-the-analysis-2-predictor" class="level3" data-number="7.1.8">
+<h3 data-number="7.1.8" class="anchored" data-anchor-id="element-h.-plan-section-6-creating-the-analysis-2-predictor"><span class="header-section-number">7.1.8</span> Element H. (Plan Section 6: Creating the Analysis 2 Predictor)</h3>
+<ol type="1">
+<li>You have followed the instructions in <a href="https://thomaselove.github.io/431-projectA-2025/data.html#data-task-4.-create-a-factor-for-the-analysis-2-predictor">Data Task 4</a> to develop the binary factor you will use as your Analysis 2 predictor.</li>
+<li>You have clearly identified the variable being used, and described the exact cut points you used to create the low and high groups in one or two complete English sentences.</li>
+<li>You demonstrate using code that approximately 40% of your observations are in the low group and 40% are in the high group, with missing results for the middle 20%.</li>
+</ol>
+</section>
+<section id="element-i.-plan-section-7-adding-chr-2019-data-for-the-analysis-3-outcome" class="level3" data-number="7.1.9">
+<h3 data-number="7.1.9" class="anchored" data-anchor-id="element-i.-plan-section-7-adding-chr-2019-data-for-the-analysis-3-outcome"><span class="header-section-number">7.1.9</span> Element I. (Plan Section 7: Adding CHR 2019 Data for the Analysis 3 Outcome)</h3>
+<ol type="1">
+<li>You have followed the instructions in <a href="https://thomaselove.github.io/431-projectA-2025/data.html#data-task-5.-add-data-from-chr-2019-for-your-analysis-3-outcome">Data Task 5</a> to include the 2019 version of your Analysis 3 outcome in your tibble.</li>
+<li>You have used left_join() to join the files.</li>
+<li>You have renamed the two variables (2025 version and 2019 version) appropriately.</li>
+</ol>
+</section>
+<section id="element-j.-plan-section-8-arranging-and-saving-the-analytic-tibble" class="level3" data-number="7.1.10">
+<h3 data-number="7.1.10" class="anchored" data-anchor-id="element-j.-plan-section-8-arranging-and-saving-the-analytic-tibble"><span class="header-section-number">7.1.10</span> Element J. (Plan Section 8: Arranging and Saving the Analytic Tibble)</h3>
+<ol type="1">
+<li>You have arranged the variables in the order specified in <a href="https://thomaselove.github.io/431-projectA-2025/data.html#data-task-6.-re-order-variables-and-save-the-final-chr_2025-tibble">Data Task 6</a>.</li>
+<li>The resulting Rds file is saved to a file called <code>chr_2025_YOURNAME.Rds</code> where your name is substituted in for YOURNAME, and which is part of your Canvas submission.</li>
+</ol>
+</section>
+<section id="element-k.-plan-section-9-print-the-tibble" class="level3" data-number="7.1.11">
+<h3 data-number="7.1.11" class="anchored" data-anchor-id="element-k.-plan-section-9-print-the-tibble"><span class="header-section-number">7.1.11</span> Element K. (Plan Section 9: Print the Tibble)</h3>
+<ol type="1">
+<li>You print the tibble by typing in chr_2025, with no other code.</li>
+<li>The resulting tibble is a tibble which shows the first 10 rows, and appropriate labels for your columns.</li>
+<li>The types of variables listed should match our expectations, specifically: <code>fipscode</code> and <code>county</code> are character variables, <code>state</code> and your Analysis 2 binary predictor are factors, and the other 7 variables are numeric (double-precision).</li>
+</ol>
+</section>
+<section id="element-l.-plan-section-10-numerical-summaries" class="level3" data-number="7.1.12">
+<h3 data-number="7.1.12" class="anchored" data-anchor-id="element-l.-plan-section-10-numerical-summaries"><span class="header-section-number">7.1.12</span> Element L. (Plan Section 10: Numerical Summaries)</h3>
+<ol type="1">
+<li>In section 10.1, you’ve run code successfully to do <a href="https://thomaselove.github.io/431-projectA-2025/plan.html#section-10.1-table-of-states-by-binary-factor">what is asked of you</a> (Table of States by Binary Factor). In particular, you’ve used <code>tabyl()</code> properly, and show row and column marginal totals, including for missing values of your binary predictor. Explanatory text is welcome but not required in this section.</li>
+<li>In section 10.2, you’ve run <code>describe_distribution()</code> properly on the entire tibble, <a href="https://thomaselove.github.io/431-projectA-2025/plan.html#section-10.2-describe_distribution-results">as asked of you</a>. Explanatory text is welcome but not required in this section.</li>
+<li>In section 10.3, you’ve run <code>data_codebook()</code> properly on the whole data set, using the settings <code>max_values = 6, range_at = 15)</code> without any errors or warnings happening, <a href="https://thomaselove.github.io/431-projectA-2025/plan.html#section-10.3-data_codebook-results">as requested</a>. You then include at least one English sentence to verify the issues described there, specifically regarding whether the minimum and maximum values of the quantitative data elements make sense, and that the amount of missingness meets <a href="https://thomaselove.github.io/431-projectA-2025/plan.html#section-10.3-data_codebook-results">our requirements</a> for each variable.</li>
+<li>In section 10.4, you’ve provided counts of distinct values, <a href="https://thomaselove.github.io/431-projectA-2025/plan.html#section-10.4-distinct-values">as requested</a> and we can see the results for all eleven variables. You also have a sentence or two showing that the checks of distinct <code>fipscode</code>s (a unique code for each row) and at least 15 unique values for each of the outcomes and the quantitative predictor exist.</li>
+</ol>
+</section>
+<section id="element-m.-plan-section-11-the-codebook" class="level3" data-number="7.1.13">
+<h3 data-number="7.1.13" class="anchored" data-anchor-id="element-m.-plan-section-11-the-codebook"><span class="header-section-number">7.1.13</span> Element M. (Plan Section 11: The Codebook)</h3>
+<ol type="1">
+<li>You have a sentence stating the number of counties (should be 300-800) and variables (should be eleven) in your tibble. If we use the dim() function, we should get the same answer you did.</li>
+<li>You have an attractively formatted, readable codebook that looks nice in your HTML which contains all five required parts for each of the 11 variables in your data, <a href="https://thomaselove.github.io/431-projectA-2025/plan.html#section-11.-the-codebook">as specified</a>. The five required columns of the table are the variable’s (1) name in your tibble, (2) its role, (3) its original vXXX code, (4) the definition (including units) and (5) the year(s) in which the variable was measured.</li>
+</ol>
+</section>
+<section id="element-n.-plan-section-12-research-questions" class="level3" data-number="7.1.14">
+<h3 data-number="7.1.14" class="anchored" data-anchor-id="element-n.-plan-section-12-research-questions"><span class="header-section-number">7.1.14</span> Element N. (Plan Section 12: Research Questions)</h3>
+<ol type="1">
+<li>You have carefully followed the detailed advice provided in <a href="https://thomaselove.github.io/431-projectA-2025/plan.html#section-12.-your-research-questions">Section 12 of the Plan Instructions</a>.</li>
+<li>For each of the three Analyses, you provide a clear research question which is written using appropriate syntax and grammar and <strong>ends with a question mark</strong>.</li>
+<li>Your proposed research question for each Analysis matches the task for that Analysis.</li>
+<li>You have included a statement about your pre-data analysis belief about what will happen for Analysis 1, at least.</li>
+</ol>
+</section>
+<section id="element-o.-plan-section-13-plan-reflection" class="level3" data-number="7.1.15">
+<h3 data-number="7.1.15" class="anchored" data-anchor-id="element-o.-plan-section-13-plan-reflection"><span class="header-section-number">7.1.15</span> Element O. (Plan Section 13: Plan Reflection)</h3>
+<ol type="1">
+<li>Your reflection is a paragraph describing the most challenging (or difficult) part of completing the work so far, and how you were able to overcome whatever it was that was most challenging.</li>
+<li>Your paragraph is written in strong and clear English sentences, with attention paid to grammar, syntax and spelling.</li>
+<li>It is clear to us from reading the reflection what your biggest issue was, and how you tried to address it.</li>
+</ol>
+</section>
+<section id="element-p.-plan-section-14-ai-usage" class="level3" data-number="7.1.16">
+<h3 data-number="7.1.16" class="anchored" data-anchor-id="element-p.-plan-section-14-ai-usage"><span class="header-section-number">7.1.16</span> Element P. (Plan Section 14: AI Usage)</h3>
+<ol type="1">
+<li>We want to see complete sentences here.</li>
+</ol>
+</section>
+<section id="element-q.-plan-section-15-session-information" class="level3" data-number="7.1.17">
+<h3 data-number="7.1.17" class="anchored" data-anchor-id="element-q.-plan-section-15-session-information"><span class="header-section-number">7.1.17</span> Element Q. (Plan Section 15: Session Information)</h3>
+<ol type="1">
+<li>We would prefer that this indicates that R version 4.4.1. is used. If you cannot use R 4.4.1, you should describe a meaningful reason to us here.</li>
+<li>We’re OK with either the xfun or sessioninfo package’s session information function, but prefer <code>xfun()</code></li>
+</ol>
+</section>
+<section id="element-r.-miscellaneous" class="level3" data-number="7.1.18">
+<h3 data-number="7.1.18" class="anchored" data-anchor-id="element-r.-miscellaneous"><span class="header-section-number">7.1.18</span> Element R. (Miscellaneous)</h3>
+<ol type="1">
+<li>There are no more than 2 spelling, typographical or grammatical errors in the document as a whole that we catch. Please run a spell check by hitting F7 on your Quarto before rendering it a final time, and then look at your HTML file to see if any of the headings, graphs or other elements look strange or don’t show up.</li>
+<li>No package is loaded outside of Section 1.</li>
+<li>No non-tibble data frame should ever be printed in Project A.</li>
+<li>No tibble should be printed anywhere other than in <a href="https://thomaselove.github.io/431-projectA-2025/plan.html#section-9.-print-the-tibble">Plan Section 9</a>.</li>
+<li>You make no changes to the tibble after Section 8.</li>
+</ol>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Fall 2025: PQHS/CRSP/MPHP 431 at CWRU with Professor Love</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
