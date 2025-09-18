@@ -89,10 +89,10 @@ chr_2025_useful <- chr_2025 |>
                       "WI", "WV", "WY"))
 ```
 
-This code should create a `chr_2025_raw` tibble with 3195 rows (observations) and 90 columns (variables). 
+This code should create a `chr_2025_raw` tibble with 3204 rows (observations) and 95 columns (variables). 
 
-To complete Task 1, you'll need to augment the code above to restrict the `chr_2025_raw` data to include only the **3088** rows which have "county_clustered" values of 1, since the other rows will not be used by us in this project. 
-At the end of Task 1, your `chr_2025_raw` tibble should have 3088 rows (counties) and 90 columns (variables).
+To complete Task 1, you'll need to augment the code above to restrict the `chr_2025_raw` data to include only the **3089** rows which have "county_clustered" values of 1, since the other rows will not be used by us in this project. 
+At the end of Task 1, your `chr_2025_raw` tibble should have 3089 rows (counties) and 95 columns (variables).
 
 # Data Task 2. Select six states
 
@@ -137,7 +137,7 @@ Remember to select six states (including `OH`) yielding a total of 300-800 count
 - For example, one possible combination would be `IN` (92), `MD` (24), `NJ` (21), `OR` (36) and `WA` (39) with `OH` (88) yielding exactly 300 counties.
 - another possibility would be `GA` (159), `TX` (244), `IL` (102), `MN` (87) and `KY` (120) with `OH` (88) yielding exactly 800 counties.
 
-After making your selection, and filtering the data, you should have a tibble called `chr_2025` which contains all of the 300-800 counties in your six states, and 90 columns. Be sure that the `state` variable is now a *factor* variable, rather than just a `character` variable in your tibble.
+After making your selection, and filtering the data, you should have a tibble called `chr_2025` which contains all of the 300-800 counties in your six states, and 95 columns. Be sure that the `state` variable is now a *factor* variable, rather than just a `character` variable in your tibble.
 
 # Data Task 3. Select analytic variables
 
