@@ -194,7 +194,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#sources-and-years-for-chr-2019-variables" id="toc-sources-and-years-for-chr-2019-variables" class="nav-link" data-scroll-target="#sources-and-years-for-chr-2019-variables"><span class="header-section-number">7.1</span> Sources and Years for CHR 2019 Variables</a></li>
   </ul></li>
-  <li><a href="#data-task-6.-re-order-variables-and-save-the-final-chr_2025-tibble" id="toc-data-task-6.-re-order-variables-and-save-the-final-chr_2025-tibble" class="nav-link" data-scroll-target="#data-task-6.-re-order-variables-and-save-the-final-chr_2025-tibble"><span class="header-section-number">8</span> Data Task 6. Re-order variables and save the final <code>chr_2025</code> tibble</a></li>
+  <li><a href="#data-task-6.-re-order-variables-drop-extraneous-factor-levels-then-save-the-final-chr_2025-tibble" id="toc-data-task-6.-re-order-variables-drop-extraneous-factor-levels-then-save-the-final-chr_2025-tibble" class="nav-link" data-scroll-target="#data-task-6.-re-order-variables-drop-extraneous-factor-levels-then-save-the-final-chr_2025-tibble"><span class="header-section-number">8</span> Data Task 6. Re-order variables, drop extraneous factor levels, then save the final <code>chr_2025</code> tibble</a></li>
   </ul>
 </nav>
     </div>
@@ -221,7 +221,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2025-09-18</p>
+      <p class="date-modified">2025-09-20</p>
     </div>
   </div>
     
@@ -983,8 +983,8 @@ Note
 </table>
 </section>
 </section>
-<section id="data-task-6.-re-order-variables-and-save-the-final-chr_2025-tibble" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Data Task 6. Re-order variables and save the final <code>chr_2025</code> tibble</h1>
+<section id="data-task-6.-re-order-variables-drop-extraneous-factor-levels-then-save-the-final-chr_2025-tibble" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Data Task 6. Re-order variables, drop extraneous factor levels, then save the final <code>chr_2025</code> tibble</h1>
 <p>Revise the <strong>chr_2025</strong> tibble to arrange your final tibble’s 11 variables in the following order:</p>
 <ol type="1">
 <li><code>fipscode</code>,</li>
@@ -999,6 +999,8 @@ Note
 <li>your selected (and renamed) variable 5 (from CHR 2019),</li>
 <li>the <code>county_clustered</code> variable (whose values must all be 1)</li>
 </ol>
+<p>Then, apply the <code>droplevels()</code> function to your tibble to remove all unused levels from your factors, so, for instance, instead of R thinking your tibble has 51 different <code>state</code> values (including <code>DC</code>), it will correctly understand that you have only 6 now. What you’re looking for is:</p>
+<pre><code>chr_2025 &lt;- chr_2025 |&gt; droplevels()</code></pre>
 <p>Save this final <strong>chr_2025</strong> tibble with 11 variables as an R data set (.Rds file) in your R Project, with the file name <strong>chr_2025_YOURNAME.Rds</strong>. You will share this file with us as part of your Project A Plan. If you like, you can store this <code>.Rds</code> file in a <code>data</code> subdirectory within your R Project.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">

@@ -350,7 +350,7 @@ Variable | Brief Label from CHR  | Source | Year(s)
 **`v143`** | Insufficient sleep | Behavioral Risk Factor Surveillance System | 2016
 
 
-# Data Task 6. Re-order variables and save the final `chr_2025` tibble
+# Data Task 6. Re-order variables, drop extraneous factor levels, then save the final `chr_2025` tibble
 
 Revise the **chr_2025** tibble to arrange your final tibble's 11 variables in the following order:
 
@@ -365,6 +365,12 @@ Revise the **chr_2025** tibble to arrange your final tibble's 11 variables in th
 9. your selected (and renamed) variable 5 (from CHR 2025), 
 10. your selected (and renamed) variable 5 (from CHR 2019),
 11. the `county_clustered` variable (whose values must all be 1)
+
+Then, apply the `droplevels()` function to your tibble to remove all unused levels from your factors, so, for instance, instead of R thinking your tibble has 51 different `state` values (including `DC`), it will correctly understand that you have only 6 now. What you're looking for is:
+
+```
+chr_2025 <- chr_2025 |> droplevels()
+```
 
 Save this final **chr_2025** tibble with 11 variables as an R data set (.Rds file) in your R Project, with the file name **chr_2025_YOURNAME.Rds**. You will share this file with us as part of your Project A Plan. If you like, you can store this `.Rds` file in a `data` subdirectory within your R Project.
 
