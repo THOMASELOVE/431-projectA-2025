@@ -270,7 +270,7 @@
     "href": "plan.html#section-2.-data-ingest",
     "title": "Project A Plan",
     "section": "5.2 Section 2. Data Ingest",
-    "text": "5.2 Section 2. Data Ingest\nThis section should display the results of following the instructions in Data Task 1 from the Data page. In this section, you should ingest the raw data into chr_2025_raw, selecting the main variables under consideration and then filter to the ranked counties, producing a tibble with 3088 rows and 90 columns. Do not list the tibble, but use R code to demonstrate that your work meets this requirement.\n\n\n\n\n\n\nNote\n\n\n\nWe will want to check that the project ingests the data properly. This means that you have eliminated the correct row (in any way that works) as you import the data, and that you have used read_csv() to read in the data, thus creating a tibble."
+    "text": "5.2 Section 2. Data Ingest\nThis section should display the results of following the instructions in Data Task 1 from the Data page. In this section, you should ingest the raw data into chr_2025_raw, selecting the main variables under consideration and then filter to the ranked counties, producing a tibble with 3089 rows and 95 columns. Do not list the tibble, but use R code to demonstrate that your work meets this requirement.\n\n\n\n\n\n\nNote\n\n\n\nWe will want to check that the project ingests the data properly. This means that you have eliminated the correct row (in any way that works) as you import the data, and that you have used read_csv() to read in the data, thus creating a tibble."
   },
   {
     "objectID": "plan.html#section-3.-state-selection",
