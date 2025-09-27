@@ -349,7 +349,7 @@ In 2024, what did we look for in order to ACCEPT the Project A Plan, rather than
 ### Element D. (Plan Section 2. Data Ingest)
 
 1. The data should be ingested into `chr_2025_raw` using `read_csv()` and thus creating a tibble, while eliminating the correct row, as described in [Data Task 1 from the Data page](https://thomaselove.github.io/431-projectA-2025/data.html#data-task-1.-ingest-the-raw-data).
-2. The `chr_2025_raw` tibble is then filtered to the ranked counties properly, and the resulting tibble should display 3088 rows and 90 columns (we suggest using the dim() function to verify that this is true.)
+2. The `chr_2025_raw` tibble is then filtered to the ranked counties properly, and the resulting tibble should display 3089 rows and 95 columns (we suggest using the dim() function to verify that this is true.)
 
 ### Element E. (Plan Section 3: State Selection)
 
